@@ -1,0 +1,47 @@
+{
+  "name": "dribbble-sketch",
+  "version": "1.0.0",
+  "description": "Share your creative process directly to the Dribbble community from within Sketch.",
+  "author": "Dribbble Holdings Ltd.",
+  "engines": {
+    "sketch": ">=3.0"
+  },
+  "skpm": {
+    "name": "Dribbble",
+    "manifest": "plugin/sketch/manifest.json",
+    "main": "dribbble.sketchplugin",
+    "resources": [
+      "plugin/web/main.js"
+    ],
+    "assets": [
+      "plugin/web/images/**/*"
+    ]
+  },
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1",
+    "@skpm/builder": "^0.5.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "css-loader": "^1.0.0",
+    "dotenv": "^6.0.0",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.0"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-sketchapp": "^2.0.0",
+    "sketch-module-web-view": "^1.2.3"
+  }
+}

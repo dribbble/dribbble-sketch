@@ -1,0 +1,167 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+  * {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+button {
+  font-size: 13px;
+  padding: 9px 15px 9px;;
+  line-height: 17px;
+  letter-spacing: .02em;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+
+  &.adtl {
+    background: none;
+    color: #999;
+    box-shadow: 0px 0px 0px 1px #bbb inset;
+
+    &:hover {
+      color: #444;
+      box-shadow: 0px 0px 0px 1px #777 inset;
+    }
+  }
+
+  &.cta {
+    background: #ea4c89;
+    color: #fff;
+
+    &:hover {
+      background-color: #df3e7b;
+    }
+  }
+}
+
+#login-header {
+
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 233px;
+    padding: 30px 40px 29px 40px;
+    box-sizing: border-box;
+    border-top: 3px solid #EA4C89;
+  }
+
+  .shot-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 308px;
+    height: 230px;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 36.54px;
+    margin-top: 9px;
+  }
+
+  .info {
+    width: 280px;
+    margin-top: 25px;
+    position: relative;
+    z-index: 1;
+
+    h1 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    &.light h1,
+    &.light p {
+      color: #fff;
+    }
+
+    &.dark h1 {
+      color: #444;
+    }
+
+    &.dark p {
+      color: #555555;
+    }
+  }
+
+  .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #E5E5E5;
+  }
+
+  .spacer {
+    height: 200px;
+    margin-bottom: 30px;
+  }
+}
+
+#login-footer {
+  padding: 25px 0;
+
+  .message {
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: #525252;
+    margin: 0;
+  }
+
+  .container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .spacer {
+    flex: 1 0 0;
+  }
+
+  .container .button-group {
+    display: flex;
+  }
+
+  .container button {
+    margin: 0 5px;
+  }
+
+  .loading-outer {
+    position: relative;
+    height: 58px;
+  }
+
+  .loading-inner {
+    position: absolute;
+    left: 50%;
+    margin-left: -45px;
+    top: 24px;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+  }
+
+  .loading-inner img {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+  }
+
+  .loading-inner span {
+    margin-top: 4px;
+    color: #444;
+  }
+}

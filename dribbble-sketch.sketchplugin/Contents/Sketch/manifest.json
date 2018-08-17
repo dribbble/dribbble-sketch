@@ -1,0 +1,25 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "identifier": "com.dribbble.sketch-plugin",
+  "icon": "dribbble-ball.png",
+  "commands": [
+    {
+      "name": "Share Selection",
+      "identifier": "share-command",
+      "script": "main.js"
+    }
+  ],
+  "menu": {
+    "title": "Dribbble",
+    "items": [
+      "share-command"
+    ]
+  },
+  "version": "0.0.1",
+  "description": "",
+  "name": "dribbble-sketch",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Dribbble"
+}

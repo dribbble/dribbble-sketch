@@ -5,13 +5,14 @@
   "icon": "dribbble-ball.png",
   "commands": [
     {
-      "name": "Share Selection",
+      "name": "Share to Dribbble",
       "identifier": "share-command",
-      "script": "main.js"
+      "script": "main.js",
+      "shortcut": "cmd shift d"
     }
   ],
   "menu": {
-    "title": "Dribbble",
+    "isRoot": true,
     "items": [
       "share-command"
     ]

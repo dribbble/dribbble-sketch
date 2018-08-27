@@ -1841,6 +1841,160 @@ module.exports = function buildAPI(browserWindow, panel, webview) {
 
 /***/ }),
 
+/***/ "./node_modules/sketch-module-web-view/remote.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/sketch-module-web-view/remote.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* globals NSThread */
+var BrowserWindow = __webpack_require__(/*! ./lib */ "./node_modules/sketch-module-web-view/lib/index.js")
+
+var threadDictionary = NSThread.mainThread().threadDictionary()
+
+module.exports.getWebview = function getWebview(identifier) {
+  var panel = threadDictionary[identifier]
+  if (!panel) {
+    return undefined
+  }
+  return BrowserWindow.fromPanel(panel, identifier)
+}
+
+module.exports.isWebviewPresent = function isWebviewPresent(identifier) {
+  return !!threadDictionary[identifier]
+}
+
+module.exports.sendToWebview = function sendToWebview(identifier, evalString) {
+  var browserView = module.exports.getWebview(identifier)
+
+  if (!browserView) {
+    throw new Error('Webview ' + identifier + ' not found')
+  }
+
+  return browserView.webContents.executeJavaScript(evalString)
+}
+
+
+/***/ }),
+
+/***/ "./plugin/library/config.js":
+/*!**********************************!*\
+  !*** ./plugin/library/config.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  platformIdentifier: 'sketch',
+  browserIdentifier: 'dribbble-sketch',
+  // siteUrl: 'https://dribbble.com/oauth',
+  // apiUrl: 'https://api.dribbble.com/v2/',
+  siteUrl: 'http://localhost:3000',
+  apiUrl: 'http://api.localhost:3000/v2',
+  dimensionReqs: {
+    width: 400,
+    height: 300
+  }
+};
+
+/***/ }),
+
+/***/ "./plugin/library/utils.js":
+/*!*********************************!*\
+  !*** ./plugin/library/utils.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var config = __webpack_require__(/*! ./config */ "./plugin/library/config.js");
+/**
+ * Generate a random string
+ */
+
+
+var randomString = function randomString() {
+  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+};
+/**
+ * Pick a random element from an array
+ */
+
+
+var pickRandom = function pickRandom(array) {
+  return array[Math.floor(Math.random() * array.length)];
+};
+
+module.exports = {
+  config: config,
+  randomString: randomString,
+  pickRandom: pickRandom
+};
+
+/***/ }),
+
+/***/ "./plugin/sketch/library/utils.js":
+/*!****************************************!*\
+  !*** ./plugin/sketch/library/utils.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _global = __webpack_require__(/*! ../../library/utils */ "./plugin/library/utils.js");
+
+var _require = __webpack_require__(/*! sketch-module-web-view/remote */ "./node_modules/sketch-module-web-view/remote.js"),
+    isWebviewPresent = _require.isWebviewPresent,
+    sendToWebview = _require.sendToWebview;
+/**
+ * Send message to Web View
+ */
+
+
+var sendMessage = function sendMessage(action) {
+  var values = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var id = _global.config.browserIdentifier;
+  var obj = {
+    action: action,
+    values: values
+  };
+
+  if (isWebviewPresent(id)) {
+    sendToWebview(id, "receiveMessage('".concat(JSON.stringify(obj), "')"));
+  }
+};
+/**
+ * Receive message from Web View
+ */
+
+
+var pluginActions = {};
+
+var receiveMessage = function receiveMessage(obj) {
+  var action = obj.action;
+  var values = obj.values;
+
+  if (action != null && pluginActions[action] != null) {
+    pluginActions[action](values);
+  }
+};
+
+module.exports = Object.assign(_global, {
+  sendMessage: sendMessage,
+  pluginActions: pluginActions,
+  receiveMessage: receiveMessage
+});
+
+/***/ }),
+
 /***/ "./plugin/sketch/main.js":
 /*!*******************************!*\
   !*** ./plugin/sketch/main.js ***!
@@ -1851,31 +2005,64 @@ module.exports = function buildAPI(browserWindow, panel, webview) {
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = _default;
+var sketch = __webpack_require__(/*! sketch/dom */ "sketch/dom");
 
-var _sketchModuleWebView = _interopRequireDefault(__webpack_require__(/*! sketch-module-web-view */ "./node_modules/sketch-module-web-view/lib/index.js"));
+var BrowserWindow = __webpack_require__(/*! sketch-module-web-view */ "./node_modules/sketch-module-web-view/lib/index.js");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _ = __webpack_require__(/*! ./library/utils */ "./plugin/sketch/library/utils.js");
 
-function _default(context) {
-  var browser = new _sketchModuleWebView.default({
+module.exports = function (context) {
+  var browser = new BrowserWindow({
+    identifier: _.config.browserIdentifier,
     width: 600,
     height: 350,
-    frame: false,
     movable: true,
     resizable: false,
     alwaysOnTop: false,
     backgroundColor: '#f4f4f4',
-    title: 'Share to Dribbble'
+    title: 'Share to Dribbble',
+    // titleBarStyle: 'hidden',
+    frame: false
   });
+
+  _.pluginActions.closeBrowser = function () {
+    browser.close();
+  };
+
+  _.pluginActions.setBrowserSize = function () {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        width = _ref.width,
+        height = _ref.height,
+        _ref$animated = _ref.animated,
+        animated = _ref$animated === void 0 ? false : _ref$animated;
+
+    var current = browser.getSize();
+    browser.setSize(width || current[0], height || current[1], animated);
+  };
+
+  _.pluginActions.requestSelection = function () {
+    var selectionCount = context.selection.count();
+    var selectedComponent;
+
+    if (selectionCount > 0) {
+      selectedComponent = sketch.fromNative(context.selection[0]);
+    }
+
+    _.sendMessage('receiveSelection', {
+      length: selectionCount,
+      component: selectedComponent != null ? selectedComponent.toJSON() : undefined
+    });
+  };
+
+  browser.on('closed', function () {
+    browser = null;
+  });
+  browser.webContents.on('pluginMessage', _.receiveMessage);
 
   var view = __webpack_require__(/*! ../web/main.html */ "./plugin/web/main.html");
 
   browser.loadURL(view);
-}
+};
 
 /***/ }),
 
@@ -1886,7 +2073,18 @@ function _default(context) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/616356736c28e3292e71f386c895da93.html").path();
+module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/83693b8e01a3f4b62b67b6988920a7ee.html").path();
+
+/***/ }),
+
+/***/ "sketch/dom":
+/*!*****************************!*\
+  !*** external "sketch/dom" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("sketch/dom");
 
 /***/ })
 

@@ -1,21 +1,38 @@
 const React = require('react')
+const _ = require('../../library/utils')
+const Header = require('../header/Header.jsx')
+const CloseFooter = require('../common/CloseFooter.jsx')
+
+const errorMessages = {
+  notConnected() {
+    return 'Whoops! It looks like you’re not connected to the internet.'
+  },
+  noSelection() {
+    return `You’ll need to first select a layer from the Layers panel.`
+  },
+  multipleSelection() {
+    return 'You’ve selected more than one Layer. Please select one and try again.'
+  },
+  tooSmall() {
+    return `Your selection is ${this.props.selection.frame.width}px × ${this.props.selection.frame.height}px, which is too small. Dribbble requires Shots to be at least ${_.config.dimensionReqs.width}px × ${_.config.dimensionReqs.height}px.`
+  }
+}
 
 module.exports = class ErrorModal extends React.Component {
   constructor(props) {
     super(props)
+  }
 
-    this.onDoneClick = (e) => {
-      this.props.dialog.close()
-    }
+  componentDidMount() {
+    _.sendMessage('setBrowserSize', { height: 246 + this.refs.message.clientHeight })
   }
 
   render() {
     return (
-      <div>
-        <p>Error</p>
-        <footer>
-          <button type="submit" uxp-variant="cta" onClick={this.onDoneClick}>Done</button>
-        </footer>
+      <div id="errors">
+        <Header type={this.props.type === 'notConnected' ? 'connection' : 'error'} />
+        <p ref="message" className="message">{errorMessages[this.props.type].call(this)}</p>
+        <CloseFooter />
       </div>
     )
   }

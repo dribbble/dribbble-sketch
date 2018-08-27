@@ -98,7 +98,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "body {\n  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }\n  body * {\n    -webkit-user-select: none;\n    user-select: none; }\n\nbutton {\n  font-size: 13px;\n  padding: 9px 15px 9px;\n  line-height: 17px;\n  letter-spacing: .02em;\n  cursor: pointer;\n  border: none;\n  border-radius: 4px; }\n  button.adtl {\n    background: none;\n    color: #999;\n    box-shadow: 0px 0px 0px 1px #bbb inset; }\n    button.adtl:hover {\n      color: #444;\n      box-shadow: 0px 0px 0px 1px #777 inset; }\n  button.cta {\n    background: #ea4c89;\n    color: #fff; }\n    button.cta:hover {\n      background-color: #df3e7b; }\n\n#login-header .container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 233px;\n  padding: 30px 40px 29px 40px;\n  box-sizing: border-box;\n  border-top: 3px solid #EA4C89; }\n\n#login-header .shot-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 308px;\n  height: 230px; }\n\n#login-header .logo img {\n  width: 150px;\n  height: 36.54px;\n  margin-top: 9px; }\n\n#login-header .info {\n  width: 280px;\n  margin-top: 25px;\n  position: relative;\n  z-index: 1; }\n  #login-header .info h1 {\n    font-size: 18px;\n    font-weight: 700; }\n  #login-header .info p {\n    margin-top: 10px;\n    font-size: 15px;\n    line-height: 20px; }\n  #login-header .info.light h1,\n  #login-header .info.light p {\n    color: #fff; }\n  #login-header .info.dark h1 {\n    color: #444; }\n  #login-header .info.dark p {\n    color: #555555; }\n\n#login-header .border {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 1px;\n  background-color: #E5E5E5; }\n\n#login-header .spacer {\n  height: 200px;\n  margin-bottom: 30px; }\n\n#login-footer {\n  padding: 25px 0; }\n  #login-footer .message {\n    text-align: center;\n    font-size: 16px;\n    line-height: 20px;\n    color: #525252;\n    margin: 0; }\n  #login-footer .container {\n    margin-top: 15px;\n    display: flex;\n    flex-direction: row; }\n  #login-footer .spacer {\n    flex: 1 0 0; }\n  #login-footer .container .button-group {\n    display: flex; }\n  #login-footer .container button {\n    margin: 0 5px; }\n  #login-footer .loading-outer {\n    position: relative;\n    height: 58px; }\n  #login-footer .loading-inner {\n    position: absolute;\n    left: 50%;\n    margin-left: -45px;\n    top: 24px;\n    display: flex;\n    flex-direction: row;\n    font-size: 15px; }\n  #login-footer .loading-inner img {\n    width: 32px;\n    height: 32px;\n    flex: 0 0 32px; }\n  #login-footer .loading-inner span {\n    margin-top: 4px;\n    color: #444; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }\n  body * {\n    -webkit-user-select: none;\n    user-select: none; }\n\nbutton {\n  font-size: 13px;\n  padding: 9px 15px 9px;\n  line-height: 17px;\n  letter-spacing: .02em;\n  cursor: pointer;\n  border: none;\n  border-radius: 4px; }\n  button.adtl {\n    background: none;\n    color: #999;\n    box-shadow: 0px 0px 0px 1px #bbb inset; }\n    button.adtl:hover {\n      color: #444;\n      box-shadow: 0px 0px 0px 1px #777 inset; }\n  button.cta {\n    background: #ea4c89;\n    color: #fff; }\n    button.cta:hover {\n      background-color: #df3e7b; }\n\n#login-header .container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 233px;\n  padding: 30px 40px 29px 40px;\n  box-sizing: border-box;\n  border-top: 3px solid #EA4C89; }\n\n#login-header .shot-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 308px;\n  height: 230px; }\n\n#login-header .logo img {\n  width: 150px;\n  height: 36.54px;\n  margin-top: 9px;\n  -webkit-user-drag: none;\n  user-drag: none; }\n\n#login-header .info {\n  width: 280px;\n  margin-top: 25px;\n  position: relative;\n  z-index: 1; }\n  #login-header .info h1 {\n    font-size: 18px;\n    font-weight: 700; }\n  #login-header .info p {\n    margin-top: 10px;\n    font-size: 15px;\n    line-height: 20px; }\n  #login-header .info.light h1,\n  #login-header .info.light p {\n    color: #fff; }\n  #login-header .info.dark h1 {\n    color: #444; }\n  #login-header .info.dark p {\n    color: #555555; }\n\n#login-header .border {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 1px;\n  background-color: #E5E5E5; }\n\n#login-header .spacer {\n  height: 200px;\n  margin-bottom: 30px; }\n\n#login-footer {\n  padding: 25px 0; }\n  #login-footer .message {\n    text-align: center;\n    font-size: 16px;\n    line-height: 20px;\n    color: #525252;\n    margin: 0; }\n  #login-footer .container {\n    margin-top: 15px;\n    display: flex;\n    flex-direction: row; }\n  #login-footer .spacer {\n    flex: 1 0 0; }\n  #login-footer .container .button-group {\n    display: flex; }\n  #login-footer .container button {\n    margin: 0 5px; }\n  #login-footer .loading-outer {\n    position: relative;\n    height: 58px; }\n  #login-footer .loading-inner {\n    position: absolute;\n    left: 50%;\n    margin-left: -45px;\n    top: 24px;\n    display: flex;\n    flex-direction: row;\n    font-size: 15px; }\n  #login-footer .loading-inner img {\n    width: 32px;\n    height: 32px;\n    flex: 0 0 32px; }\n  #login-footer .loading-inner span {\n    margin-top: 4px;\n    color: #444; }\n\n#errors {\n  padding: 30px 40px; }\n  #errors .message {\n    font-size: 16px;\n    line-height: 23px;\n    color: #525252;\n    margin: 0; }\n\n#close-footer {\n  margin-top: 35px;\n  display: flex;\n  flex-direction: row; }\n  #close-footer .spacer {\n    flex: 1 0 0; }\n\n#share-header {\n  height: 82px;\n  margin-bottom: 30px; }\n  #share-header header {\n    position: absolute;\n    top: 0;\n    left: 0;\n    background-color: #fff;\n    width: calc(100% - 80px);\n    padding: 25px 40px 23px 40px;\n    border-top: 3px solid #EA4C89; }\n  #share-header .top-section {\n    display: flex;\n    flex-direction: row; }\n  #share-header .border {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 1px;\n    background-color: #E5E5E5; }\n  #share-header .logo {\n    flex: 0 0 78px; }\n    #share-header .logo img {\n      width: 78px;\n      height: 19px; }\n  #share-header .title {\n    display: flex;\n    flex-direction: row;\n    margin-top: 13px;\n    margin-bottom: 0; }\n    #share-header .title img {\n      width: 24px;\n      height: 24px;\n      flex: 0 0 24px; }\n    #share-header .title span {\n      margin-left: 9px;\n      font-size: 22px;\n      font-weight: 700;\n      color: #444; }\n\n#header-dropdown-container {\n  flex: 1 0 0;\n  text-align: right;\n  position: relative; }\n  #header-dropdown-container .trigger {\n    display: block;\n    padding: 15px 10px;\n    height: 5px;\n    position: absolute;\n    top: -6px;\n    right: 0; }\n  #header-dropdown-container .dots {\n    width: 22px;\n    height: 5.5px;\n    vertical-align: top; }\n", ""]);
 
 // exports
 
@@ -20093,6 +20093,41 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/sketch-module-web-view/client.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/sketch-module-web-view/client.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var CONSTANTS = __webpack_require__(/*! ./lib/constants */ "./node_modules/sketch-module-web-view/lib/constants.js")
+
+module.exports = function(actionName) {
+  if (!actionName) {
+    throw new Error('missing action name')
+  }
+  window[CONSTANTS.JS_BRIDGE].callNative(
+    JSON.stringify([].slice.call(arguments))
+  )
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/sketch-module-web-view/lib/constants.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/sketch-module-web-view/lib/constants.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  JS_BRIDGE: '__skpm_sketchBridge',
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -20600,6 +20635,134 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./plugin/library/config.js":
+/*!**********************************!*\
+  !*** ./plugin/library/config.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  platformIdentifier: 'sketch',
+  browserIdentifier: 'dribbble-sketch',
+  // siteUrl: 'https://dribbble.com/oauth',
+  // apiUrl: 'https://api.dribbble.com/v2/',
+  siteUrl: 'http://localhost:3000',
+  apiUrl: 'http://api.localhost:3000/v2',
+  dimensionReqs: {
+    width: 400,
+    height: 300
+  }
+};
+
+/***/ }),
+
+/***/ "./plugin/library/utils.js":
+/*!*********************************!*\
+  !*** ./plugin/library/utils.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var config = __webpack_require__(/*! ./config */ "./plugin/library/config.js");
+/**
+ * Generate a random string
+ */
+
+
+var randomString = function randomString() {
+  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+};
+/**
+ * Pick a random element from an array
+ */
+
+
+var pickRandom = function pickRandom(array) {
+  return array[Math.floor(Math.random() * array.length)];
+};
+
+module.exports = {
+  config: config,
+  randomString: randomString,
+  pickRandom: pickRandom
+};
+
+/***/ }),
+
+/***/ "./plugin/web/components/common/CloseFooter.jsx":
+/*!******************************************************!*\
+  !*** ./plugin/web/components/common/CloseFooter.jsx ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _ = __webpack_require__(/*! ../../library/utils */ "./plugin/web/library/utils.js");
+
+module.exports =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(CloseFooter, _React$Component);
+
+  function CloseFooter(props) {
+    _classCallCheck(this, CloseFooter);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(CloseFooter).call(this, props));
+  }
+
+  _createClass(CloseFooter, [{
+    key: "dismissDialog",
+    value: function dismissDialog() {
+      _.sendMessage('closeBrowser');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return React.createElement("footer", {
+        id: "close-footer"
+      }, React.createElement("div", {
+        className: "spacer"
+      }), React.createElement("button", {
+        className: "cta",
+        onClick: this.dismissDialog.bind(this)
+      }, "Okay"));
+    }
+  }]);
+
+  return CloseFooter;
+}(React.Component);
+
+/***/ }),
+
 /***/ "./plugin/web/components/error/ErrorModal.jsx":
 /*!****************************************************!*\
   !*** ./plugin/web/components/error/ErrorModal.jsx ***!
@@ -20630,37 +20793,207 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
+var _ = __webpack_require__(/*! ../../library/utils */ "./plugin/web/library/utils.js");
+
+var Header = __webpack_require__(/*! ../header/Header.jsx */ "./plugin/web/components/header/Header.jsx");
+
+var CloseFooter = __webpack_require__(/*! ../common/CloseFooter.jsx */ "./plugin/web/components/common/CloseFooter.jsx");
+
+var errorMessages = {
+  notConnected: function notConnected() {
+    return 'Whoops! It looks like you’re not connected to the internet.';
+  },
+  noSelection: function noSelection() {
+    return "You\u2019ll need to first select a layer from the Layers panel.";
+  },
+  multipleSelection: function multipleSelection() {
+    return 'You’ve selected more than one Layer. Please select one and try again.';
+  },
+  tooSmall: function tooSmall() {
+    return "Your selection is ".concat(this.props.selection.frame.width, "px \xD7 ").concat(this.props.selection.frame.height, "px, which is too small. Dribbble requires Shots to be at least ").concat(_.config.dimensionReqs.width, "px \xD7 ").concat(_.config.dimensionReqs.height, "px.");
+  }
+};
+
 module.exports =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(ErrorModal, _React$Component);
 
   function ErrorModal(props) {
-    var _this;
-
     _classCallCheck(this, ErrorModal);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ErrorModal).call(this, props));
-
-    _this.onDoneClick = function (e) {
-      _this.props.dialog.close();
-    };
-
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(ErrorModal).call(this, props));
   }
 
   _createClass(ErrorModal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      _.sendMessage('setBrowserSize', {
+        height: 246 + this.refs.message.clientHeight
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return React.createElement("div", null, React.createElement("p", null, "Error"), React.createElement("footer", null, React.createElement("button", {
-        type: "submit",
-        "uxp-variant": "cta",
-        onClick: this.onDoneClick
-      }, "Done")));
+      return React.createElement("div", {
+        id: "errors"
+      }, React.createElement(Header, {
+        type: this.props.type === 'notConnected' ? 'connection' : 'error'
+      }), React.createElement("p", {
+        ref: "message",
+        className: "message"
+      }, errorMessages[this.props.type].call(this)), React.createElement(CloseFooter, null));
     }
   }]);
 
   return ErrorModal;
+}(React.Component);
+
+/***/ }),
+
+/***/ "./plugin/web/components/header/Dropdown.jsx":
+/*!***************************************************!*\
+  !*** ./plugin/web/components/header/Dropdown.jsx ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+module.exports =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Dropdown, _React$Component);
+
+  function Dropdown(props) {
+    _classCallCheck(this, Dropdown);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Dropdown).call(this, props));
+  }
+
+  _createClass(Dropdown, [{
+    key: "render",
+    value: function render() {
+      return React.createElement("div", {
+        id: "header-dropdown-container"
+      }, React.createElement("div", {
+        className: "trigger"
+      }, React.createElement("img", {
+        className: "dots",
+        src: "../web/images/icon-dots-dark.png"
+      })));
+    }
+  }]);
+
+  return Dropdown;
+}(React.Component);
+
+/***/ }),
+
+/***/ "./plugin/web/components/header/Header.jsx":
+/*!*************************************************!*\
+  !*** ./plugin/web/components/header/Header.jsx ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var Dropdown = __webpack_require__(/*! ./Dropdown.jsx */ "./plugin/web/components/header/Dropdown.jsx");
+
+var titleTypes = {
+  error: {
+    text: 'Whoops!',
+    icon: 'sad-face.png'
+  },
+  connection: {
+    text: 'No connection',
+    icon: 'no-connection.png'
+  },
+  share: {
+    text: 'Share this selection',
+    icon: 'upload-cloud.png'
+  }
+};
+
+module.exports =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Header, _React$Component);
+
+  function Header(props) {
+    _classCallCheck(this, Header);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Header).call(this, props));
+  }
+
+  _createClass(Header, [{
+    key: "render",
+    value: function render() {
+      var title = titleTypes[this.props.type];
+      return React.createElement("div", {
+        id: "share-header"
+      }, React.createElement("header", null, React.createElement("div", {
+        className: "top-section"
+      }, React.createElement("div", {
+        className: "logo-container"
+      }, React.createElement("div", {
+        className: "logo"
+      }, React.createElement("img", {
+        src: "../web/images/dribbble-logo.png"
+      }))), React.createElement(Dropdown, null)), React.createElement("p", {
+        className: "title"
+      }, React.createElement("img", {
+        src: "../web/images/".concat(title.icon)
+      }), React.createElement("span", null, title.text)), React.createElement("div", {
+        className: "border"
+      })));
+    }
+  }]);
+
+  return Header;
 }(React.Component);
 
 /***/ }),
@@ -20695,8 +21028,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
-var _ = __webpack_require__(/*! ../../library/utils */ "./plugin/web/library/utils.js"); // const uxp = require('uxp')
-
+var _ = __webpack_require__(/*! ../../library/utils */ "./plugin/web/library/utils.js");
 
 module.exports =
 /*#__PURE__*/
@@ -20729,7 +21061,7 @@ function (_React$Component) {
   }, {
     key: "dismissDialog",
     value: function dismissDialog() {
-      this.props.dialog.close();
+      _.sendMessage('closeBrowser');
     }
   }, {
     key: "launchLogin",
@@ -20861,8 +21193,7 @@ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var shots = __webpack_require__(/*! ./shots */ "./plugin/web/components/login/shots.js");
 
-var _ = __webpack_require__(/*! ../../library/utils */ "./plugin/web/library/utils.js"); // const uxp = require('uxp')
-
+var _ = __webpack_require__(/*! ../../library/utils */ "./plugin/web/library/utils.js");
 
 module.exports =
 /*#__PURE__*/
@@ -21135,36 +21466,6 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./plugin/web/library/config.js":
-/*!**************************************!*\
-  !*** ./plugin/web/library/config.js ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var platformIdentifier = 'sketch'; // const siteUrl = "https://dribbble.com/oauth"
-// const apiUrl = "https://api.dribbble.com/v2/"
-
-var siteUrl = "http://localhost:3000";
-var apiUrl = "http://api.localhost:3000/v2"; // Dribbble requires a shot to
-// be at least 400x300 pixels
-
-var dimensionReqs = {
-  width: 400,
-  height: 300
-};
-module.exports = {
-  platformIdentifier: platformIdentifier,
-  siteUrl: siteUrl,
-  apiUrl: apiUrl,
-  dimensionReqs: dimensionReqs
-};
-
-/***/ }),
-
 /***/ "./plugin/web/library/utils.js":
 /*!*************************************!*\
   !*** ./plugin/web/library/utils.js ***!
@@ -21175,181 +21476,55 @@ module.exports = {
 "use strict";
 
 
-var serialize = __webpack_require__(/*! ../vendor/serialize */ "./plugin/web/vendor/serialize.js"); // const Settings = require('./settings')
+var _global = __webpack_require__(/*! ../../library/utils */ "./plugin/library/utils.js");
+
+var serialize = __webpack_require__(/*! ../vendor/serialize */ "./plugin/web/vendor/serialize.js");
+
+var pluginCall = __webpack_require__(/*! sketch-module-web-view/client */ "./node_modules/sketch-module-web-view/client.js");
+/**
+ * Send message to Sketch
+ */
 
 
-var config = __webpack_require__(/*! ./config */ "./plugin/web/library/config.js"); // const uxp = require('uxp')
-// const app = require('application')
+var sendMessage = function sendMessage(action) {
+  var values = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  pluginCall('pluginMessage', {
+    action: action,
+    values: values
+  });
+};
+/**
+ * Receive message from Sketch
+ */
 
+
+var pluginActions = {};
+
+var receiveMessage = function receiveMessage(stringifiedJSON) {
+  var obj = JSON.parse(stringifiedJSON);
+  var action = obj.action;
+  var values = obj.values;
+
+  if (action != null && pluginActions[action] != null) {
+    pluginActions[action](values);
+  }
+};
 /**
  * Check against our internal dimension requirements
  * to see if the selection dimensions are too small
  */
 
 
-var nodeTooSmall = function nodeTooSmall(node) {
-  return node.width < config.dimensionReqs.width && node.height < config.dimensionReqs.height;
+var selectionTooSmall = function selectionTooSmall(selection) {
+  return selection.frame.width < _global.config.dimensionReqs.width && selection.frame.height < _global.config.dimensionReqs.height;
 };
-/**
- * Check against our internal list of Node types
- * to ensure we can export the node correctly
- */
 
-
-var nodeNotAllowed = function nodeNotAllowed(node) {
-  return config.allowedNodeTypes.indexOf(node.constructor.name) < 0;
-};
-/**
- * Convert an array of strings in to a sentence
- */
-
-
-var toSentence = function toSentence(array) {
-  var lastSeparator = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'or';
-  return array.reduce(function (prev, curr, i) {
-    return prev + curr + (i === array.length - 2 ? ", ".concat(lastSeparator, " ") : ', ');
-  }, '').slice(0, -2);
-};
-/**
- * Generate a random string
- */
-
-
-var randomString = function randomString() {
-  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-};
-/**
- * Pick a random element from an array
- */
-
-
-var pickRandom = function pickRandom(array) {
-  return array[Math.floor(Math.random() * array.length)];
-};
-/**
- * Using the XD Plugin API, save a selection node
- * to the local filesystem temporarily, then open
- * and read it, and finally convert it to a base64
- * string and resolve the promise with it
- */
-// const imageBase64FromNode = async function(node) {
-//   const tempFolder = await uxp.storage.localFileSystem.getTemporaryFolder()
-//   const shotFile = await tempFolder.createEntry(`${randomString()}.png`, {
-//     overwrite: true
-//   })
-//   return new Promise(function(resolve, reject) {
-//     app.createRenditions([{
-//       node: node,
-//       outputFile: shotFile,
-//       type: app.RenditionType.PNG,
-//       scale: 2
-//     }]).then(async function(files) {
-//       const buffer = await files[0].read({
-//         format: uxp.storage.formats.binary
-//       })
-//       let binaryData = ''
-//       let bytes = new Uint8Array(buffer)
-//       let byteLength = bytes.byteLength
-//       for (var i = 0; i < byteLength; i++) {
-//         binaryData += String.fromCharCode(bytes[i])
-//       }
-//       resolve(window.btoa(binaryData))
-//     }).catch(function(error) {
-//       reject(error)
-//     })
-//   })
-// }
-
-/**
- * XHR helper to poll an address, with max timeout and retries,
- * until a succesful response is returned
- */
-
-
-var pollRequest = function pollRequest() {
-  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      method = _ref.method,
-      url = _ref.url,
-      _ref$params = _ref.params,
-      params = _ref$params === void 0 ? '' : _ref$params,
-      _ref$timeout = _ref.timeout,
-      timeout = _ref$timeout === void 0 ? 3000 : _ref$timeout,
-      _ref$max = _ref.max,
-      max = _ref$max === void 0 ? 10 : _ref$max;
-
-  var retryCount = 0;
-  var request = new XMLHttpRequest();
-  var serializedParams = serializeObject(params);
-
-  var performRequest = function performRequest() {
-    retryCount = retryCount + 1;
-    request.send(serializedParams);
-  };
-
-  request.timeout = timeout; // Y u no work?
-  // request.responseType = 'json'
-
-  request.open(method, url, true);
-  request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  return new Promise(function (resolve, reject) {
-    request.addEventListener('load', function () {
-      if (request.status === 200) {
-        try {
-          resolve(request);
-        } catch (error) {
-          reject("Couldn't parse response. ".concat(error.message, ", ").concat(error.response));
-        }
-      } else {
-        reject("Request had an error: ".concat(request.status));
-      }
-    });
-    request.addEventListener('timeout', function () {
-      if (retryCount === max) {
-        return reject({
-          state: 'quit'
-        });
-      }
-
-      performRequest();
-    });
-    request.addEventListener('error', function (error) {
-      reject({
-        state: 'error',
-        error: error
-      });
-    });
-    performRequest();
-  });
-};
-/**
- * Serialize an object (one level deep) in to URL params
- */
-
-
-var serializeObject = function serializeObject(obj) {
-  return Object.keys(obj).map(function (key) {
-    return "".concat(key, "=").concat(encodeURIComponent(obj[key]));
-  }).join('&');
-};
-/**
- * Set up out Settings module
- */
-// const settings = new Settings()
-
-
-module.exports = {
-  serialize: serialize,
-  config: config,
-  nodeTooSmall: nodeTooSmall,
-  nodeNotAllowed: nodeNotAllowed,
-  toSentence: toSentence,
-  randomString: randomString,
-  pickRandom: pickRandom,
-  // imageBase64FromNode,
-  // pollRequest,
-  serializeObject: serializeObject // settings
-
-};
+module.exports = Object.assign(_global, {
+  sendMessage: sendMessage,
+  pluginActions: pluginActions,
+  receiveMessage: receiveMessage,
+  selectionTooSmall: selectionTooSmall
+});
 
 /***/ }),
 
@@ -21363,15 +21538,15 @@ module.exports = {
 "use strict";
 
 
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
-var ReactDOM = _interopRequireWildcard(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 
 var _ = __webpack_require__(/*! ./library/utils */ "./plugin/web/library/utils.js");
 
 var style = __webpack_require__(/*! ./style.scss */ "./plugin/web/style.scss");
+
+window.receiveMessage = _.receiveMessage;
 
 var ErrorModal = __webpack_require__(/*! ./components/error/ErrorModal.jsx */ "./plugin/web/components/error/ErrorModal.jsx");
 
@@ -21382,38 +21557,47 @@ var ShareModal = __webpack_require__(/*! ./components/share/ShareModal.jsx */ ".
 // const loggedIn = authToken != null
 
 
-var loggedIn = false;
-var Component,
-    props = {};
+var loggedIn = true;
 
-if (!navigator.onLine) {
-  Component = ErrorModal;
-  props = {
-    type: 'notConnected'
-  };
-} else if (!loggedIn) {
-  Component = LoginModal;
-} // else if (!selectedNode) {
-//   Component = ErrorModal
-//   props = { type: 'noSelection' }
-// } else if (selection.length > 1) {
-//   Component = ErrorModal
-//   props = { type: 'multipleSelection' }
-// } else if (_.nodeNotAllowed(selectedNode)) {
-//   Component = ErrorModal
-//   props = { type: 'badNodeType', node: selectedNode }
-// } else if (_.nodeTooSmall(selectedNode)) {
-//   Component = ErrorModal
-//   props = { type: 'tooSmall', node: selectedNode }
-// }
-else {
+_.pluginActions.receiveSelection = function (selection) {
+  var Component,
+      props = {};
+
+  if (!navigator.onLine) {
+    Component = ErrorModal;
+    props = {
+      type: 'notConnected'
+    };
+  } else if (!loggedIn) {
+    Component = LoginModal;
+  } else if (selection.length === 0) {
+    Component = ErrorModal;
+    props = {
+      type: 'noSelection'
+    };
+  } else if (selection.length > 1) {
+    Component = ErrorModal;
+    props = {
+      type: 'multipleSelection'
+    };
+  } else if (_.selectionTooSmall(selection.component)) {
+    Component = ErrorModal;
+    props = {
+      type: 'tooSmall',
+      selection: selection.component
+    };
+  } else {
     Component = ShareModal;
     props = {
-      node: selectedNode
+      selection: selection.component
     };
   }
 
-ReactDOM.render(React.createElement(Component, props, null), document.getElementById('app'));
+  ReactDOM.render(React.createElement(Component, props, null), document.getElementById('app'));
+  window.pluginLoaded = true;
+};
+
+_.sendMessage('requestSelection');
 
 /***/ }),
 

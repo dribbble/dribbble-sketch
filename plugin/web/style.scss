@@ -62,6 +62,8 @@ button {
     width: 150px;
     height: 36.54px;
     margin-top: 9px;
+    -webkit-user-drag: none;
+    user-drag: none;
   }
 
   .info {
@@ -163,5 +165,105 @@ button {
   .loading-inner span {
     margin-top: 4px;
     color: #444;
+  }
+}
+
+#errors {
+  padding: 30px 40px;
+
+  .message {
+    font-size: 16px;
+    line-height: 23px;
+    color: #525252;
+    margin: 0;
+  }
+}
+
+#close-footer {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+
+  .spacer {
+    flex: 1 0 0;
+  }
+}
+
+#share-header {
+  height: 82px;
+  margin-bottom: 30px;
+
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: calc(100% - 80px);
+    padding: 25px 40px 23px 40px;
+    border-top: 3px solid #EA4C89;
+  }
+
+  .top-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #E5E5E5;
+  }
+
+  .logo {
+    flex: 0 0 78px;
+
+    img {
+      width: 78px;
+      height: 19px;
+    }
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    margin-top: 13px;
+    margin-bottom: 0;
+
+    img {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+    }
+
+    span {
+      margin-left: 9px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #444;
+    }
+  }
+}
+
+#header-dropdown-container {
+  flex: 1 0 0;
+  text-align: right;
+  position: relative;
+
+  .trigger {
+    display: block;
+    padding: 15px 10px;
+    height: 5px;
+    position: absolute;
+    top: -6px;
+    right: 0;
+  }
+
+  .dots {
+    width: 22px;
+    height: 5.5px;
+    vertical-align: top;
   }
 }

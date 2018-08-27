@@ -1,6 +1,5 @@
 const React = require('react')
 const _ = require('../../library/utils')
-// const uxp = require('uxp')
 
 module.exports = class Actions extends React.Component {
   constructor(props) {
@@ -22,7 +21,7 @@ module.exports = class Actions extends React.Component {
   }
 
   dismissDialog() {
-    this.props.dialog.close()
+    _.sendMessage('closeBrowser')
   }
 
   launchLogin() {

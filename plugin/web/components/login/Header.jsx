@@ -1,7 +1,6 @@
 const React = require('react')
 const shots = require('./shots')
 const _ = require('../../library/utils')
-// const uxp = require('uxp')
 
 module.exports = class Header extends React.Component {
   constructor(props) {

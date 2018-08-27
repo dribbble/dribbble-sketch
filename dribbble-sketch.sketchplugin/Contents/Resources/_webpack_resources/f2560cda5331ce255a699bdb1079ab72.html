@@ -29,7 +29,7 @@
 
       #loading-inner.bad-news {
         text-align: center;
-        width: 270px;
+        width: 260px;
       }
 
       #loading-inner img {
@@ -49,12 +49,7 @@
         if (!window.pluginLoaded) {
           const inner = document.querySelector('#loading-inner')
           inner.classList.add('bad-news')
-          inner.innerHTML = `
-            <p>
-              <b>Something's not right.</b>
-              Please try again or re-install the plugin.
-              Sorry about that.
-            </p>`
+          inner.innerHTML = `<p>Something's not right. Please try again or re-install the plugin.</p>`
         }
       }, 5000)
     </script>

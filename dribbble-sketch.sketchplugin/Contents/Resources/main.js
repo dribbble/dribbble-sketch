@@ -98,7 +98,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "body {\n  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }\n  body * {\n    -webkit-user-select: none;\n    user-select: none; }\n\nbutton {\n  font-size: 13px;\n  padding: 9px 15px 9px;\n  line-height: 17px;\n  letter-spacing: .02em;\n  cursor: pointer;\n  border: none;\n  border-radius: 4px; }\n  button.adtl {\n    background: none;\n    color: #999;\n    box-shadow: 0px 0px 0px 1px #bbb inset; }\n    button.adtl:hover {\n      color: #444;\n      box-shadow: 0px 0px 0px 1px #777 inset; }\n  button.cta {\n    background: #ea4c89;\n    color: #fff; }\n    button.cta:hover {\n      background-color: #df3e7b; }\n\n#login-header .container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 233px;\n  padding: 30px 40px 29px 40px;\n  box-sizing: border-box;\n  border-top: 3px solid #EA4C89; }\n\n#login-header .shot-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 308px;\n  height: 230px; }\n\n#login-header .logo img {\n  width: 150px;\n  height: 36.54px;\n  margin-top: 9px;\n  -webkit-user-drag: none;\n  user-drag: none; }\n\n#login-header .info {\n  width: 280px;\n  margin-top: 25px;\n  position: relative;\n  z-index: 1; }\n  #login-header .info h1 {\n    font-size: 18px;\n    font-weight: 700; }\n  #login-header .info p {\n    margin-top: 10px;\n    font-size: 15px;\n    line-height: 20px; }\n  #login-header .info.light h1,\n  #login-header .info.light p {\n    color: #fff; }\n  #login-header .info.dark h1 {\n    color: #444; }\n  #login-header .info.dark p {\n    color: #555555; }\n\n#login-header .border {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 1px;\n  background-color: #E5E5E5; }\n\n#login-header .spacer {\n  height: 200px;\n  margin-bottom: 30px; }\n\n#login-footer {\n  padding: 25px 0; }\n  #login-footer .message {\n    text-align: center;\n    font-size: 16px;\n    line-height: 20px;\n    color: #525252;\n    margin: 0; }\n  #login-footer .container {\n    margin-top: 15px;\n    display: flex;\n    flex-direction: row; }\n  #login-footer .spacer {\n    flex: 1 0 0; }\n  #login-footer .container .button-group {\n    display: flex; }\n  #login-footer .container button {\n    margin: 0 5px; }\n  #login-footer .loading-outer {\n    position: relative;\n    height: 58px; }\n  #login-footer .loading-inner {\n    position: absolute;\n    left: 50%;\n    margin-left: -45px;\n    top: 24px;\n    display: flex;\n    flex-direction: row;\n    font-size: 15px; }\n  #login-footer .loading-inner img {\n    width: 32px;\n    height: 32px;\n    flex: 0 0 32px; }\n  #login-footer .loading-inner span {\n    margin-top: 4px;\n    color: #444; }\n\n#errors {\n  padding: 30px 40px; }\n  #errors .message {\n    font-size: 16px;\n    line-height: 23px;\n    color: #525252;\n    margin: 0; }\n\n#close-footer {\n  margin-top: 35px;\n  display: flex;\n  flex-direction: row; }\n  #close-footer .spacer {\n    flex: 1 0 0; }\n\n#share-header {\n  height: 82px;\n  margin-bottom: 30px; }\n  #share-header header {\n    position: absolute;\n    top: 0;\n    left: 0;\n    background-color: #fff;\n    width: calc(100% - 80px);\n    padding: 25px 40px 23px 40px;\n    border-top: 3px solid #EA4C89; }\n  #share-header .top-section {\n    display: flex;\n    flex-direction: row; }\n  #share-header .border {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 1px;\n    background-color: #E5E5E5; }\n  #share-header .logo {\n    flex: 0 0 78px; }\n    #share-header .logo img {\n      width: 78px;\n      height: 19px; }\n  #share-header .title {\n    display: flex;\n    flex-direction: row;\n    margin-top: 13px;\n    margin-bottom: 0; }\n    #share-header .title img {\n      width: 24px;\n      height: 24px;\n      flex: 0 0 24px; }\n    #share-header .title span {\n      margin-left: 9px;\n      font-size: 22px;\n      font-weight: 700;\n      color: #444; }\n\n#header-dropdown-container {\n  flex: 1 0 0;\n  text-align: right;\n  position: relative; }\n  #header-dropdown-container .trigger {\n    display: block;\n    padding: 15px 10px;\n    height: 5px;\n    position: absolute;\n    top: -6px;\n    right: 0; }\n  #header-dropdown-container .dots {\n    width: 22px;\n    height: 5.5px;\n    vertical-align: top; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }\n  body * {\n    -webkit-user-select: none;\n    user-select: none;\n    -webkit-user-drag: none;\n    user-drag: none; }\n\n.default-cursor {\n  cursor: default; }\n\nbutton {\n  font-size: 13px;\n  padding: 9px 15px 9px;\n  line-height: 17px;\n  letter-spacing: .02em;\n  cursor: pointer;\n  border: none;\n  border-radius: 4px; }\n  button.adtl {\n    background: none;\n    color: #999;\n    box-shadow: 0px 0px 0px 1px #bbb inset; }\n    button.adtl:hover {\n      color: #444;\n      box-shadow: 0px 0px 0px 1px #777 inset; }\n  button.cta {\n    background: #ea4c89;\n    color: #fff; }\n    button.cta:hover {\n      background-color: #df3e7b; }\n\n.loading-button {\n  font-size: 13px;\n  padding: 9px 15px 9px;\n  line-height: 17px;\n  letter-spacing: .02em;\n  border: none;\n  border-radius: 4px;\n  background: #f8f8f8;\n  margin: 0 5px;\n  color: #777; }\n  .loading-button img {\n    width: 26px;\n    height: 26px;\n    margin: -10px 0 -10px -6px; }\n\n#login-header .container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 233px;\n  padding: 30px 40px 29px 40px;\n  box-sizing: border-box;\n  border-top: 3px solid #EA4C89; }\n\n#login-header .shot-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 308px;\n  height: 230px;\n  cursor: pointer; }\n\n#login-header .logo img {\n  width: 150px;\n  height: 36.54px;\n  margin-top: 9px;\n  cursor: pointer; }\n\n#login-header .info {\n  width: 280px;\n  margin-top: 25px;\n  position: relative;\n  z-index: 1; }\n  #login-header .info h1 {\n    font-size: 18px;\n    font-weight: 700; }\n  #login-header .info p {\n    margin-top: 10px;\n    font-size: 15px;\n    line-height: 20px; }\n  #login-header .info.light h1,\n  #login-header .info.light p {\n    color: #fff; }\n  #login-header .info.dark h1 {\n    color: #444; }\n  #login-header .info.dark p {\n    color: #555555; }\n\n#login-header .border {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 1px;\n  background-color: #E5E5E5; }\n\n#login-header .spacer {\n  height: 200px;\n  margin-bottom: 30px; }\n\n#login-footer {\n  padding: 25px 0; }\n  #login-footer .message {\n    text-align: center;\n    font-size: 16px;\n    line-height: 20px;\n    color: #525252;\n    margin: 0; }\n  #login-footer .container {\n    margin-top: 15px;\n    display: flex;\n    flex-direction: row; }\n  #login-footer .spacer {\n    flex: 1 0 0; }\n  #login-footer .container .button-group {\n    display: flex; }\n  #login-footer .container button {\n    margin: 0 5px; }\n\n#errors {\n  padding: 30px 40px; }\n  #errors .message {\n    font-size: 16px;\n    line-height: 23px;\n    color: #525252;\n    margin: 0; }\n\n#close-footer {\n  margin-top: 35px;\n  display: flex;\n  flex-direction: row; }\n  #close-footer .spacer {\n    flex: 1 0 0; }\n\n#share-header {\n  height: 82px;\n  margin-bottom: 30px; }\n  #share-header header {\n    position: absolute;\n    top: 0;\n    left: 0;\n    background-color: #fff;\n    width: calc(100% - 80px);\n    padding: 25px 40px 23px 40px;\n    border-top: 3px solid #EA4C89; }\n  #share-header .top-section {\n    display: flex;\n    flex-direction: row; }\n  #share-header .border {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 1px;\n    background-color: #E5E5E5; }\n  #share-header .logo {\n    flex: 0 0 78px; }\n    #share-header .logo img {\n      width: 78px;\n      height: 19px; }\n  #share-header .title {\n    display: flex;\n    flex-direction: row;\n    margin-top: 13px;\n    margin-bottom: 0; }\n    #share-header .title img {\n      width: 24px;\n      height: 24px;\n      flex: 0 0 24px; }\n    #share-header .title span {\n      margin-left: 9px;\n      font-size: 22px;\n      font-weight: 700;\n      color: #444; }\n\n#header-dropdown-container {\n  flex: 1 0 0;\n  text-align: right;\n  position: relative; }\n  #header-dropdown-container .trigger {\n    display: block;\n    padding: 15px 10px;\n    height: 5px;\n    position: absolute;\n    top: -6px;\n    right: 0;\n    border-top-left-radius: 5px;\n    border-top-right-radius: 5px;\n    cursor: pointer; }\n  #header-dropdown-container.active .trigger {\n    background: #333; }\n  #header-dropdown-container .dots {\n    width: 22px;\n    height: 5.5px;\n    vertical-align: top; }\n\n#dropdown-navigation {\n  background: #333;\n  display: none;\n  position: absolute;\n  top: 25px;\n  right: 0;\n  z-index: 1;\n  font-size: 14px;\n  line-height: 1.2;\n  text-align: left;\n  border-radius: 5px;\n  border-top-right-radius: 0; }\n  .active #dropdown-navigation {\n    display: block; }\n  #dropdown-navigation ul {\n    list-style-type: none;\n    padding: 10px 0;\n    margin: 0; }\n  #dropdown-navigation li.divider {\n    border-top: 1px solid rgba(255, 255, 255, 0.15);\n    padding-top: 8px;\n    margin-top: 8px; }\n  #dropdown-navigation a {\n    color: #999;\n    padding: 5px 15px;\n    text-decoration: none;\n    display: block; }\n    #dropdown-navigation a:hover {\n      color: #ddd;\n      background-color: rgba(255, 255, 255, 0.1); }\n", ""]);
 
 // exports
 
@@ -20648,10 +20648,10 @@ module.exports = function (css) {
 module.exports = {
   platformIdentifier: 'sketch',
   browserIdentifier: 'dribbble-sketch',
-  // siteUrl: 'https://dribbble.com/oauth',
-  // apiUrl: 'https://api.dribbble.com/v2/',
-  siteUrl: 'http://localhost:3000',
-  apiUrl: 'http://api.localhost:3000/v2',
+  apiKey: "62deac8a106c866b6047c864a24cdab7f0d03b6330e0099bfeda45eac6a1b8b5",
+  siteUrl: "https://".concat("staging.dribbble.com"),
+  apiUrl: "https://api.".concat("staging.dribbble.com", "/v2"),
+  helpUrl: "https://help.dribbble.com/",
   dimensionReqs: {
     width: 400,
     height: 300
@@ -20829,19 +20829,19 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       _.sendMessage('setBrowserSize', {
-        height: 246 + this.refs.message.clientHeight
+        height: this.refs.container.clientHeight
       });
     }
   }, {
     key: "render",
     value: function render() {
       return React.createElement("div", {
-        id: "errors"
+        id: "errors",
+        ref: "container"
       }, React.createElement(Header, {
         type: this.props.type === 'notConnected' ? 'connection' : 'error'
       }), React.createElement("p", {
-        ref: "message",
-        className: "message"
+        className: "message default-cursor"
       }, errorMessages[this.props.type].call(this)), React.createElement(CloseFooter, null));
     }
   }]);
@@ -20881,6 +20881,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
+var _ = __webpack_require__(/*! ../../library/utils */ "./plugin/web/library/utils.js");
+
 module.exports =
 /*#__PURE__*/
 function (_React$Component) {
@@ -20893,16 +20895,69 @@ function (_React$Component) {
   }
 
   _createClass(Dropdown, [{
+    key: "toggleMenu",
+    value: function toggleMenu() {
+      this.refs.container.classList.toggle('active');
+    }
+  }, {
+    key: "logout",
+    value: function logout() {
+      _.sendMessage('saveAuthToken', {
+        token: ''
+      });
+
+      _.sendMessage('closeBrowser');
+    }
+  }, {
+    key: "launchAccount",
+    value: function launchAccount() {
+      _.sendMessage('openURL', {
+        url: "".concat(_.config.siteUrl, "/account")
+      });
+    }
+  }, {
+    key: "launchHelp",
+    value: function launchHelp() {
+      _.sendMessage('openURL', {
+        url: _.config.helpUrl
+      });
+    }
+  }, {
+    key: "launchSite",
+    value: function launchSite() {
+      _.sendMessage('openURL', {
+        url: _.config.siteUrl
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return React.createElement("div", {
-        id: "header-dropdown-container"
+        id: "header-dropdown-container",
+        ref: "container"
       }, React.createElement("div", {
-        className: "trigger"
+        className: "trigger",
+        onClick: this.toggleMenu.bind(this)
       }, React.createElement("img", {
         className: "dots",
         src: "../web/images/icon-dots-dark.png"
-      })));
+      })), React.createElement("nav", {
+        id: "dropdown-navigation"
+      }, React.createElement("ul", null, React.createElement("li", null, React.createElement("a", {
+        href: "#",
+        onClick: this.logout.bind(this)
+      }, "Log out")), React.createElement("li", null, React.createElement("a", {
+        href: "#",
+        onClick: this.launchAccount.bind(this)
+      }, "Account settings")), React.createElement("li", {
+        className: "divider"
+      }, React.createElement("a", {
+        href: "#",
+        onClick: this.launchHelp.bind(this)
+      }, "Need help?")), React.createElement("li", null, React.createElement("a", {
+        href: "#",
+        onClick: this.launchSite.bind(this)
+      }, "Visit Dribbble.com")))));
     }
   }]);
 
@@ -20987,7 +21042,9 @@ function (_React$Component) {
         className: "title"
       }, React.createElement("img", {
         src: "../web/images/".concat(title.icon)
-      }), React.createElement("span", null, title.text)), React.createElement("div", {
+      }), React.createElement("span", {
+        className: "default-cursor"
+      }, title.text)), React.createElement("div", {
         className: "border"
       })));
     }
@@ -21043,7 +21100,7 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Actions).call(this, props));
     _this.state = {
       status: 'login',
-      sessionID: _.randomString()
+      sessionId: _.randomString()
     };
     return _this;
   }
@@ -21053,8 +21110,8 @@ function (_React$Component) {
     value: function messages(status) {
       return {
         login: 'To share your work from Sketch, please log in.',
+        loading: 'Please visit the page opened in your browser.',
         error: 'Something went wrong. Want to try again?',
-        timeout: 'Sorry, that took too long to complete. Try again?',
         success: 'You’re all set! Re-open this dialog to start sharing.'
       }[status];
     }
@@ -21068,73 +21125,57 @@ function (_React$Component) {
     value: function launchLogin() {
       var _this2 = this;
 
-      var authUrl = "".concat(_.config.siteUrl, "/auth/plugin?state=").concat(_.config.platformIdentifier, "-").concat(this.state.sessionId); // uxp.shell.openExternal(authUrl)
+      var authUrl = "".concat(_.config.siteUrl, "/auth/plugin?state=").concat(_.config.platformIdentifier, "-").concat(this.state.sessionId);
+
+      _.sendMessage('openURL', {
+        url: authUrl
+      });
 
       this.setState({
         status: 'loading'
       });
 
-      _.pollRequest({
-        method: 'POST',
-        url: "".concat(_.config.siteUrl, "/auth/plugin/check"),
-        params: {
-          code: this.state.sessionId,
-          provider: _.config.platformIdentifier
-        }
-      }).then(function (request) {
-        if (request.status === 200) {
-          var result = JSON.parse(request.responseText);
+      var checkParams = _.serializeObject({
+        code: this.state.sessionId,
+        platform: _.config.platformIdentifier
+      });
 
-          _.settings.access().then(function (settings) {
-            settings.set('authToken', result.token);
+      var checkHeaders = {};
+
+      if ("dribbble:bananastand$$" != null) {
+        checkHeaders['Authorization'] = "Basic ".concat(btoa("dribbble:bananastand$$"));
+      }
+
+      _.retriableFetch("".concat(_.config.siteUrl, "/auth/plugin/check?").concat(checkParams), {
+        method: 'GET',
+        headers: checkHeaders
+      }).then(function (response) {
+        response.json().then(function (data) {
+          _.sendMessage('saveAuthToken', {
+            token: data.token
           });
 
           _this2.setState({
             status: 'success'
           });
-        } else {
-          console.log("Error logging in: ".concat(request.status));
-
+        }).catch(function (error) {
           _this2.setState({
             status: 'error'
           });
-        }
-      }).catch(function (response) {
-        var message = '';
-
-        if (response.state === 'quit') {
-          _this2.setState({
-            status: 'timeout'
-          });
-        } else if (response.state === 'error') {
-          console.log("Error logging in: ".concat(response.error));
-
-          _this2.setState({
-            status: 'loading'
-          });
-        }
+        });
+      }).catch(function (error) {
+        _this2.setState({
+          status: 'error'
+        });
       });
     }
   }, {
     key: "render",
     value: function render() {
-      if (this.state.status === 'loading') {
-        return React.createElement("div", {
-          id: "login-footer"
-        }, React.createElement("div", {
-          className: "loading-outer",
-          title: "Please visit the page opened in your browser."
-        }, React.createElement("div", {
-          className: "loading-inner"
-        }, React.createElement("img", {
-          src: "../web/images/processing.gif"
-        }), React.createElement("span", null, "Waiting..."))));
-      }
-
       return React.createElement("div", {
         id: "login-footer"
       }, React.createElement("p", {
-        className: "message"
+        className: "message default-cursor"
       }, this.messages(this.state.status)), React.createElement("footer", {
         className: "container"
       }, React.createElement("div", {
@@ -21147,7 +21188,13 @@ function (_React$Component) {
       }, React.createElement("button", {
         onClick: this.dismissDialog.bind(this),
         className: "adtl"
-      }, "Cancel"), React.createElement("button", {
+      }, "Cancel"), this.state.status === 'loading' ? React.createElement("div", {
+        className: "loading-button"
+      }, React.createElement("img", {
+        src: "../web/images/processing.gif"
+      }), React.createElement("span", {
+        className: "default-cursor"
+      }, "Waiting...")) : React.createElement("button", {
         onClick: this.launchLogin.bind(this),
         className: "cta"
       }, "Log in to Dribbble")), React.createElement("div", {
@@ -21214,11 +21261,17 @@ function (_React$Component) {
 
   _createClass(Header, [{
     key: "launchSite",
-    value: function launchSite() {// uxp.shell.openExternal('https://dribbble.com/?utm_source=xd-plugin')
+    value: function launchSite() {
+      _.sendMessage('openURL', {
+        url: "https://dribbble.com/?utm_source=".concat(_.config.platformIdentifier, "-plugin")
+      });
     }
   }, {
     key: "launchShot",
-    value: function launchShot() {// uxp.shell.openExternal(this.state.shot.url)
+    value: function launchShot() {
+      _.sendMessage('openURL', {
+        url: this.state.shot.url
+      });
     }
   }, {
     key: "render",
@@ -21245,7 +21298,11 @@ function (_React$Component) {
         src: "../web/images/dribbble-logo-large-".concat(this.state.shot.theme, ".png")
       })), React.createElement("div", {
         className: "info ".concat(this.state.shot.theme)
-      }, React.createElement("h1", null, "What are you working on?"), React.createElement("p", null, "Dribbble is a community of designers sharing screenshots of their work, process, and projects.")), React.createElement("div", {
+      }, React.createElement("h1", {
+        className: "default-cursor"
+      }, "What are you working on?"), React.createElement("p", {
+        className: "default-cursor"
+      }, "Dribbble is a community of designers sharing screenshots of their work, process, and projects.")), React.createElement("div", {
         className: "border"
       })), React.createElement("div", {
         className: "spacer"
@@ -21292,6 +21349,8 @@ var Header = __webpack_require__(/*! ./Header.jsx */ "./plugin/web/components/lo
 
 var Actions = __webpack_require__(/*! ./Actions.jsx */ "./plugin/web/components/login/Actions.jsx");
 
+var _ = __webpack_require__(/*! ../../library/utils */ "./plugin/web/library/utils.js");
+
 module.exports =
 /*#__PURE__*/
 function (_React$Component) {
@@ -21304,9 +21363,18 @@ function (_React$Component) {
   }
 
   _createClass(LoginModal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      _.sendMessage('setBrowserSize', {
+        height: this.refs.container.clientHeight
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return React.createElement("div", null, React.createElement(Header, null), React.createElement(Actions, {
+      return React.createElement("div", {
+        ref: "container"
+      }, React.createElement(Header, null), React.createElement(Actions, {
         dialog: this.props.dialog
       }));
     }
@@ -21519,11 +21587,56 @@ var selectionTooSmall = function selectionTooSmall(selection) {
   return selection.frame.width < _global.config.dimensionReqs.width && selection.frame.height < _global.config.dimensionReqs.height;
 };
 
+var retriableFetch = function retriableFetch(url) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
+    retries: 5,
+    delay: 2000
+  };
+
+  var delayedRetry = function delayedRetry(resolve, reject) {
+    setTimeout(function () {
+      config.retries = config.retries - 1;
+      retriableFetch(url, options, config).then(resolve).catch(reject);
+    }, config.delay);
+  };
+
+  return new Promise(function (resolve, reject) {
+    fetch(url, options).then(function (response) {
+      if (response.ok) {
+        return resolve(response);
+      } else if (config.retries === 1) {
+        throw error;
+      }
+
+      delayedRetry(resolve, reject);
+    }).catch(function (error) {
+      if (config.retries === 1) {
+        throw error;
+      }
+
+      delayedRetry(resolve, reject);
+    });
+  });
+};
+/**
+ * Serialize an object (one level deep) in to URL params
+ */
+
+
+var serializeObject = function serializeObject(obj) {
+  return Object.keys(obj).map(function (key) {
+    return "".concat(key, "=").concat(encodeURIComponent(obj[key]));
+  }).join('&');
+};
+
 module.exports = Object.assign(_global, {
   sendMessage: sendMessage,
   pluginActions: pluginActions,
   receiveMessage: receiveMessage,
-  selectionTooSmall: selectionTooSmall
+  selectionTooSmall: selectionTooSmall,
+  retriableFetch: retriableFetch,
+  serializeObject: serializeObject
 });
 
 /***/ }),
@@ -21552,14 +21665,10 @@ var ErrorModal = __webpack_require__(/*! ./components/error/ErrorModal.jsx */ ".
 
 var LoginModal = __webpack_require__(/*! ./components/login/LoginModal.jsx */ "./plugin/web/components/login/LoginModal.jsx");
 
-var ShareModal = __webpack_require__(/*! ./components/share/ShareModal.jsx */ "./plugin/web/components/share/ShareModal.jsx"); // const settings = await _.settings.access()
-// const authToken = settings.get('authToken')
-// const loggedIn = authToken != null
+var ShareModal = __webpack_require__(/*! ./components/share/ShareModal.jsx */ "./plugin/web/components/share/ShareModal.jsx");
 
-
-var loggedIn = true;
-
-_.pluginActions.receiveSelection = function (selection) {
+_.pluginActions.receiveContext = function (context) {
+  var authToken = context.authToken;
   var Component,
       props = {};
 
@@ -21568,28 +21677,29 @@ _.pluginActions.receiveSelection = function (selection) {
     props = {
       type: 'notConnected'
     };
-  } else if (!loggedIn) {
+  } else if (!authToken || !authToken.length) {
     Component = LoginModal;
-  } else if (selection.length === 0) {
+  } else if (context.selectionSize === 0) {
     Component = ErrorModal;
     props = {
       type: 'noSelection'
     };
-  } else if (selection.length > 1) {
+  } else if (context.selectionSize > 1) {
     Component = ErrorModal;
     props = {
       type: 'multipleSelection'
     };
-  } else if (_.selectionTooSmall(selection.component)) {
+  } else if (_.selectionTooSmall(context.selection)) {
     Component = ErrorModal;
     props = {
       type: 'tooSmall',
-      selection: selection.component
+      selection: context.selection
     };
   } else {
     Component = ShareModal;
     props = {
-      selection: selection.component
+      selection: context.selection,
+      auth: authToken
     };
   }
 
@@ -21597,7 +21707,7 @@ _.pluginActions.receiveSelection = function (selection) {
   window.pluginLoaded = true;
 };
 
-_.sendMessage('requestSelection');
+_.sendMessage('requestContext');
 
 /***/ }),
 

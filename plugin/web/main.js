@@ -9,31 +9,27 @@ const ErrorModal = require('./components/error/ErrorModal.jsx')
 const LoginModal = require('./components/login/LoginModal.jsx')
 const ShareModal = require('./components/share/ShareModal.jsx')
 
-// const settings = await _.settings.access()
-// const authToken = settings.get('authToken')
-// const loggedIn = authToken != null
-const loggedIn = true
-
-_.pluginActions.receiveSelection = function(selection) {
+_.pluginActions.receiveContext = function(context) {
+  const authToken = context.authToken
   let Component, props = {}
 
   if (!navigator.onLine) {
     Component = ErrorModal
     props = { type: 'notConnected' }
-  } else if (!loggedIn) {
+  } else if (!authToken || !authToken.length) {
     Component = LoginModal
-  } else if (selection.length === 0) {
+  } else if (context.selectionSize === 0) {
     Component = ErrorModal
     props = { type: 'noSelection' }
-  } else if (selection.length > 1) {
+  } else if (context.selectionSize > 1) {
      Component = ErrorModal
      props = { type: 'multipleSelection' }
-  } else if (_.selectionTooSmall(selection.component)) {
+  } else if (_.selectionTooSmall(context.selection)) {
     Component = ErrorModal
-    props = { type: 'tooSmall', selection: selection.component }
+    props = { type: 'tooSmall', selection: context.selection }
   } else {
     Component = ShareModal
-    props = { selection: selection.component }
+    props = { selection: context.selection, auth: authToken }
   }
 
   ReactDOM.render(
@@ -44,4 +40,4 @@ _.pluginActions.receiveSelection = function(selection) {
   window.pluginLoaded = true
 }
 
-_.sendMessage('requestSelection')
+_.sendMessage('requestContext')

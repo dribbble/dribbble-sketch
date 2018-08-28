@@ -12,11 +12,11 @@ module.exports = class Header extends React.Component {
   }
 
   launchSite() {
-    // uxp.shell.openExternal('https://dribbble.com/?utm_source=xd-plugin')
+    _.sendMessage('openURL', { url: `https://dribbble.com/?utm_source=${_.config.platformIdentifier}-plugin` })
   }
 
   launchShot() {
-    // uxp.shell.openExternal(this.state.shot.url)
+    _.sendMessage('openURL', { url: this.state.shot.url })
   }
 
   render() {
@@ -30,8 +30,8 @@ module.exports = class Header extends React.Component {
           </div>
 
           <div className={`info ${this.state.shot.theme}`}>
-            <h1>What are you working on?</h1>
-            <p>Dribbble is a community of designers sharing screenshots of their work, process, and projects.</p>
+            <h1 className="default-cursor">What are you working on?</h1>
+            <p className="default-cursor">Dribbble is a community of designers sharing screenshots of their work, process, and projects.</p>
           </div>
 
           <div className="border" />

@@ -34,9 +34,49 @@ const selectionTooSmall = function(selection) {
   )
 }
 
+const retriableFetch = (url, options={}, config={ retries: 5, delay: 2000 }) => {
+  const delayedRetry = function(resolve, reject) {
+    setTimeout(() => {
+      config.retries = config.retries - 1
+      retriableFetch(url, options, config)
+        .then(resolve)
+        .catch(reject)
+    }, config.delay)
+  }
+
+  return new Promise((resolve, reject) => {
+    fetch(url, options).then((response) => {
+      if (response.ok) {
+        return resolve(response)
+      } else if (config.retries === 1) {
+        throw error
+      }
+
+      delayedRetry(resolve, reject)
+    }).catch((error) => {
+      if (config.retries === 1) {
+        throw error
+      }
+
+      delayedRetry(resolve, reject)
+    })
+  })
+}
+
+/**
+ * Serialize an object (one level deep) in to URL params
+ */
+const serializeObject = function(obj) {
+  return Object.keys(obj).map((key) => {
+    return `${key}=${encodeURIComponent(obj[key])}`
+  }).join('&')
+}
+
 module.exports = Object.assign(_global, {
   sendMessage,
   pluginActions,
   receiveMessage,
   selectionTooSmall,
+  retriableFetch,
+  serializeObject,
 })

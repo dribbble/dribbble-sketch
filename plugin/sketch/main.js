@@ -1,4 +1,3 @@
-const sketch = require('sketch/dom')
 const BrowserWindow = require('sketch-module-web-view')
 const _ = require('./library/utils')
 
@@ -25,17 +24,18 @@ module.exports = function(context) {
     browser.setSize(width || current[0], height || current[1], animated)
   }
 
-  _.pluginActions.requestSelection = function() {
-    const selectionCount = context.selection.count()
+  _.pluginActions.requestContext = function() {
+    const selectionSize = context.selection.count()
     let selectedComponent
 
-    if (selectionCount > 0) {
-      selectedComponent = sketch.fromNative(context.selection[0])
+    if (selectionSize > 0) {
+      selectedComponent = _.sketch.fromNative(context.selection[0])
     }
 
-    _.sendMessage('receiveSelection', {
-      length: selectionCount,
-      component: selectedComponent != null
+    _.sendMessage('receiveContext', {
+      authToken: _.Settings.settingForKey('auth-token'),
+      selectionSize: selectionSize,
+      selection: selectedComponent != null
         ? selectedComponent.toJSON()
         : undefined
     })

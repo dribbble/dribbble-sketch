@@ -7,15 +7,15 @@ module.exports = class Actions extends React.Component {
 
     this.state = {
       status: 'login',
-      sessionID: _.randomString()
+      sessionId: _.randomString()
     }
   }
 
   messages(status) {
     return ({
       login: 'To share your work from Sketch, please log in.',
+      loading: 'Please visit the page opened in your browser.',
       error: 'Something went wrong. Want to try again?',
-      timeout: 'Sorry, that took too long to complete. Try again?',
       success: 'You’re all set! Re-open this dialog to start sharing.'
     })[status]
   }
@@ -26,59 +26,39 @@ module.exports = class Actions extends React.Component {
 
   launchLogin() {
     const authUrl = `${_.config.siteUrl}/auth/plugin?state=${_.config.platformIdentifier}-${this.state.sessionId}`
-    // uxp.shell.openExternal(authUrl)
+    _.sendMessage('openURL', { url: authUrl })
 
     this.setState({ status: 'loading' })
 
-    _.pollRequest({
-      method: 'POST',
-      url: `${_.config.siteUrl}/auth/plugin/check`,
-      params: {
-        code: this.state.sessionId,
-        provider: _.config.platformIdentifier
-      }
-    }).then((request) => {
-      if (request.status === 200) {
-        var result = JSON.parse(request.responseText)
+    const checkParams = _.serializeObject({
+      code: this.state.sessionId,
+      platform: _.config.platformIdentifier
+    })
 
-        _.settings.access().then((settings) => {
-          settings.set('authToken', result.token)
-        })
+    const checkHeaders = {}
+    if (STAGING_AUTH != null) {
+      checkHeaders['Authorization'] = `Basic ${btoa(STAGING_AUTH)}`
+    }
 
+    _.retriableFetch(`${_.config.siteUrl}/auth/plugin/check?${checkParams}`, {
+      method: 'GET',
+      headers: checkHeaders,
+    }).then((response) => {
+      response.json().then((data) => {
+        _.sendMessage('saveAuthToken', { token: data.token })
         this.setState({ status: 'success' })
-      } else {
-        console.log(`Error logging in: ${request.status}`)
+      }).catch((error) => {
         this.setState({ status: 'error' })
-      }
-    }).catch((response) => {
-      let message = ''
-
-      if (response.state === 'quit') {
-        this.setState({ status: 'timeout' })
-      } else if (response.state === 'error') {
-        console.log(`Error logging in: ${response.error}`)
-        this.setState({ status: 'loading' })
-      }
+      })
+    }).catch((error) => {
+      this.setState({ status: 'error' })
     })
   }
 
   render() {
-    if (this.state.status === 'loading') {
-      return (
-        <div id="login-footer">
-          <div className="loading-outer" title="Please visit the page opened in your browser.">
-            <div className="loading-inner">
-              <img src="../web/images/processing.gif" />
-              <span>Waiting...</span>
-            </div>
-          </div>
-        </div>
-      )
-    }
-
     return (
       <div id="login-footer">
-        <p className="message">{this.messages(this.state.status)}</p>
+        <p className="message default-cursor">{this.messages(this.state.status)}</p>
 
         <footer className="container">
           <div className="spacer"></div>
@@ -87,7 +67,14 @@ module.exports = class Actions extends React.Component {
           ) : (
             <div className="button-group">
               <button onClick={this.dismissDialog.bind(this)} className="adtl">Cancel</button>
-              <button onClick={this.launchLogin.bind(this)} className="cta">Log in to Dribbble</button>
+              { this.state.status === 'loading' ? (
+                <div className="loading-button">
+                  <img src="../web/images/processing.gif" />
+                  <span className="default-cursor">Waiting...</span>
+                </div>
+              ) : (
+                <button onClick={this.launchLogin.bind(this)} className="cta">Log in to Dribbble</button>
+              ) }
             </div>
           ) }
           <div className="spacer"></div>

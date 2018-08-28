@@ -4,7 +4,13 @@ body {
   * {
     -webkit-user-select: none;
     user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
   }
+}
+
+.default-cursor {
+  cursor: default;
 }
 
 button {
@@ -37,6 +43,24 @@ button {
   }
 }
 
+.loading-button {
+  font-size: 13px;
+  padding: 9px 15px 9px;
+  line-height: 17px;
+  letter-spacing: .02em;
+  border: none;
+  border-radius: 4px;
+  background: #f8f8f8;
+  margin: 0 5px;
+  color: #777;
+
+  img {
+    width: 26px;
+    height: 26px;
+    margin: -10px 0 -10px -6px;
+  }
+}
+
 #login-header {
 
   .container {
@@ -56,14 +80,14 @@ button {
     right: 0;
     width: 308px;
     height: 230px;
+    cursor: pointer;
   }
 
   .logo img {
     width: 150px;
     height: 36.54px;
     margin-top: 9px;
-    -webkit-user-drag: none;
-    user-drag: none;
+    cursor: pointer;
   }
 
   .info {
@@ -139,32 +163,6 @@ button {
 
   .container button {
     margin: 0 5px;
-  }
-
-  .loading-outer {
-    position: relative;
-    height: 58px;
-  }
-
-  .loading-inner {
-    position: absolute;
-    left: 50%;
-    margin-left: -45px;
-    top: 24px;
-    display: flex;
-    flex-direction: row;
-    font-size: 15px;
-  }
-
-  .loading-inner img {
-    width: 32px;
-    height: 32px;
-    flex: 0 0 32px;
-  }
-
-  .loading-inner span {
-    margin-top: 4px;
-    color: #444;
   }
 }
 
@@ -259,11 +257,60 @@ button {
     position: absolute;
     top: -6px;
     right: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+  }
+
+  &.active .trigger {
+    background: #333;
   }
 
   .dots {
     width: 22px;
     height: 5.5px;
     vertical-align: top;
+  }
+}
+
+#dropdown-navigation {
+  background: #333;
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: left;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+
+  .active & {
+    display: block;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  li.divider {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 8px;
+    margin-top: 8px;
+  }
+
+  a {
+    color: #999;
+    padding: 5px 15px;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      color: #ddd;
+      background-color: rgba(255,255,255,0.1);
+    }
   }
 }

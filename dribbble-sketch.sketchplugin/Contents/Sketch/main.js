@@ -1891,10 +1891,10 @@ module.exports.sendToWebview = function sendToWebview(identifier, evalString) {
 module.exports = {
   platformIdentifier: 'sketch',
   browserIdentifier: 'dribbble-sketch',
-  // siteUrl: 'https://dribbble.com/oauth',
-  // apiUrl: 'https://api.dribbble.com/v2/',
-  siteUrl: 'http://localhost:3000',
-  apiUrl: 'http://api.localhost:3000/v2',
+  apiKey: "62deac8a106c866b6047c864a24cdab7f0d03b6330e0099bfeda45eac6a1b8b5",
+  siteUrl: "https://".concat("staging.dribbble.com"),
+  apiUrl: "https://api.".concat("staging.dribbble.com", "/v2"),
+  helpUrl: "https://help.dribbble.com/",
   dimensionReqs: {
     width: 400,
     height: 300
@@ -1954,6 +1954,10 @@ var _global = __webpack_require__(/*! ../../library/utils */ "./plugin/library/u
 var _require = __webpack_require__(/*! sketch-module-web-view/remote */ "./node_modules/sketch-module-web-view/remote.js"),
     isWebviewPresent = _require.isWebviewPresent,
     sendToWebview = _require.sendToWebview;
+
+var sketch = __webpack_require__(/*! sketch/dom */ "sketch/dom");
+
+var Settings = __webpack_require__(/*! sketch/settings */ "sketch/settings");
 /**
  * Send message to Web View
  */
@@ -1976,7 +1980,17 @@ var sendMessage = function sendMessage(action) {
  */
 
 
-var pluginActions = {};
+var pluginActions = {
+  saveAuthToken: function saveAuthToken(_ref) {
+    var token = _ref.token;
+    Settings.setSettingForKey('auth-token', token);
+  },
+  openURL: function openURL(_ref2) {
+    var url = _ref2.url;
+
+    _openURL(url);
+  }
+};
 
 var receiveMessage = function receiveMessage(obj) {
   var action = obj.action;
@@ -1986,11 +2000,23 @@ var receiveMessage = function receiveMessage(obj) {
     pluginActions[action](values);
   }
 };
+/**
+ * Open a URL in default browser
+ */
+
+
+var _openURL = function _openURL(url) {
+  var nsurl = NSURL.URLWithString(url);
+  NSWorkspace.sharedWorkspace().openURL(nsurl);
+};
 
 module.exports = Object.assign(_global, {
+  sketch: sketch,
+  Settings: Settings,
   sendMessage: sendMessage,
   pluginActions: pluginActions,
-  receiveMessage: receiveMessage
+  receiveMessage: receiveMessage,
+  openURL: _openURL
 });
 
 /***/ }),
@@ -2004,8 +2030,6 @@ module.exports = Object.assign(_global, {
 
 "use strict";
 
-
-var sketch = __webpack_require__(/*! sketch/dom */ "sketch/dom");
 
 var BrowserWindow = __webpack_require__(/*! sketch-module-web-view */ "./node_modules/sketch-module-web-view/lib/index.js");
 
@@ -2040,17 +2064,18 @@ module.exports = function (context) {
     browser.setSize(width || current[0], height || current[1], animated);
   };
 
-  _.pluginActions.requestSelection = function () {
-    var selectionCount = context.selection.count();
+  _.pluginActions.requestContext = function () {
+    var selectionSize = context.selection.count();
     var selectedComponent;
 
-    if (selectionCount > 0) {
-      selectedComponent = sketch.fromNative(context.selection[0]);
+    if (selectionSize > 0) {
+      selectedComponent = _.sketch.fromNative(context.selection[0]);
     }
 
-    _.sendMessage('receiveSelection', {
-      length: selectionCount,
-      component: selectedComponent != null ? selectedComponent.toJSON() : undefined
+    _.sendMessage('receiveContext', {
+      authToken: _.Settings.settingForKey('auth-token'),
+      selectionSize: selectionSize,
+      selection: selectedComponent != null ? selectedComponent.toJSON() : undefined
     });
   };
 
@@ -2085,6 +2110,17 @@ module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resour
 /***/ (function(module, exports) {
 
 module.exports = require("sketch/dom");
+
+/***/ }),
+
+/***/ "sketch/settings":
+/*!**********************************!*\
+  !*** external "sketch/settings" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("sketch/settings");
 
 /***/ })
 

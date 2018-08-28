@@ -24,14 +24,14 @@ module.exports = class ErrorModal extends React.Component {
   }
 
   componentDidMount() {
-    _.sendMessage('setBrowserSize', { height: 246 + this.refs.message.clientHeight })
+    _.sendMessage('setBrowserSize', { height: this.refs.container.clientHeight })
   }
 
   render() {
     return (
-      <div id="errors">
+      <div id="errors" ref="container">
         <Header type={this.props.type === 'notConnected' ? 'connection' : 'error'} />
-        <p ref="message" className="message">{errorMessages[this.props.type].call(this)}</p>
+        <p className="message default-cursor">{errorMessages[this.props.type].call(this)}</p>
         <CloseFooter />
       </div>
     )

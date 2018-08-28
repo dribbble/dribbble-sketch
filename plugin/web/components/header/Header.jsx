@@ -39,7 +39,7 @@ module.exports = class Header extends React.Component {
 
           <p className="title">
             <img src={`../web/images/${title.icon}`} />
-            <span>{title.text}</span>
+            <span className="default-cursor">{title.text}</span>
           </p>
 
           <div className="border" />

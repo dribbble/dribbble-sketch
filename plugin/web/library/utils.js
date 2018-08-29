@@ -34,6 +34,10 @@ const selectionTooSmall = function(selection) {
   )
 }
 
+/**
+ * Wrapper for Fetch that will retry X number of times
+ * with Y delay in between retries before giving up
+ */
 const retriableFetch = (url, options={}, config={ retries: 5, delay: 2000 }) => {
   const delayedRetry = function(resolve, reject) {
     setTimeout(() => {
@@ -73,6 +77,7 @@ const serializeObject = function(obj) {
 }
 
 module.exports = Object.assign(_global, {
+  serialize,
   sendMessage,
   pluginActions,
   receiveMessage,

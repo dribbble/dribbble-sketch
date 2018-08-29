@@ -2,6 +2,14 @@ const BrowserWindow = require('sketch-module-web-view')
 const _ = require('./library/utils')
 
 module.exports = function(context) {
+  const selectionSize = context.selection.count()
+  let selectedComponent, nativeComponent
+
+  if (selectionSize > 0) {
+    nativeComponent = context.selection[0]
+    selectedComponent = _.sketch.fromNative(nativeComponent)
+  }
+
   let browser = new BrowserWindow({
     identifier: _.config.browserIdentifier,
     width: 600,
@@ -11,7 +19,6 @@ module.exports = function(context) {
     alwaysOnTop: false,
     backgroundColor: '#f4f4f4',
     title: 'Share to Dribbble',
-    // titleBarStyle: 'hidden',
     frame: false,
   })
 
@@ -24,14 +31,12 @@ module.exports = function(context) {
     browser.setSize(width || current[0], height || current[1], animated)
   }
 
+  _.pluginActions.requestSelectionImage = function() {
+    const imageData = _.componentToBase64(nativeComponent, context)
+    _.sendMessage('receiveSelectionImage', { imageData: imageData })
+  }
+
   _.pluginActions.requestContext = function() {
-    const selectionSize = context.selection.count()
-    let selectedComponent
-
-    if (selectionSize > 0) {
-      selectedComponent = _.sketch.fromNative(context.selection[0])
-    }
-
     _.sendMessage('receiveContext', {
       authToken: _.Settings.settingForKey('auth-token'),
       selectionSize: selectionSize,

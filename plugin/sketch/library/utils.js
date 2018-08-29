@@ -44,11 +44,24 @@ const openURL = function(url) {
   NSWorkspace.sharedWorkspace().openURL(nsurl)
 }
 
+/**
+ * Convert a layer component to base64 representation
+ */
+const componentToBase64 = function(component, context) {
+  const layerAncestry = MSImmutableLayerAncestry.alloc().initWithMSLayer(component)
+  const exportRequest = MSExportRequest.exportRequestsFromLayerAncestry(layerAncestry).firstObject()
+  const exporter = MSExporter.exporterForRequest_colorSpace(exportRequest, context.document.colorSpace())
+  const imageData = exporter.data()
+
+  return String(imageData.base64EncodedStringWithOptions_(0))
+}
+
 module.exports = Object.assign(_global, {
   sketch,
   Settings,
   sendMessage,
   pluginActions,
   receiveMessage,
-  openURL
+  openURL,
+  componentToBase64,
 })

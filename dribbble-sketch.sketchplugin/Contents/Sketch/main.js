@@ -2009,6 +2009,18 @@ var _openURL = function _openURL(url) {
   var nsurl = NSURL.URLWithString(url);
   NSWorkspace.sharedWorkspace().openURL(nsurl);
 };
+/**
+ * Convert a layer component to base64 representation
+ */
+
+
+var componentToBase64 = function componentToBase64(component, context) {
+  var layerAncestry = MSImmutableLayerAncestry.alloc().initWithMSLayer(component);
+  var exportRequest = MSExportRequest.exportRequestsFromLayerAncestry(layerAncestry).firstObject();
+  var exporter = MSExporter.exporterForRequest_colorSpace(exportRequest, context.document.colorSpace());
+  var imageData = exporter.data();
+  return String(imageData.base64EncodedStringWithOptions_(0));
+};
 
 module.exports = Object.assign(_global, {
   sketch: sketch,
@@ -2016,7 +2028,8 @@ module.exports = Object.assign(_global, {
   sendMessage: sendMessage,
   pluginActions: pluginActions,
   receiveMessage: receiveMessage,
-  openURL: _openURL
+  openURL: _openURL,
+  componentToBase64: componentToBase64
 });
 
 /***/ }),
@@ -2036,6 +2049,14 @@ var BrowserWindow = __webpack_require__(/*! sketch-module-web-view */ "./node_mo
 var _ = __webpack_require__(/*! ./library/utils */ "./plugin/sketch/library/utils.js");
 
 module.exports = function (context) {
+  var selectionSize = context.selection.count();
+  var selectedComponent, nativeComponent;
+
+  if (selectionSize > 0) {
+    nativeComponent = context.selection[0];
+    selectedComponent = _.sketch.fromNative(nativeComponent);
+  }
+
   var browser = new BrowserWindow({
     identifier: _.config.browserIdentifier,
     width: 600,
@@ -2045,7 +2066,6 @@ module.exports = function (context) {
     alwaysOnTop: false,
     backgroundColor: '#f4f4f4',
     title: 'Share to Dribbble',
-    // titleBarStyle: 'hidden',
     frame: false
   });
 
@@ -2064,14 +2084,15 @@ module.exports = function (context) {
     browser.setSize(width || current[0], height || current[1], animated);
   };
 
+  _.pluginActions.requestSelectionImage = function () {
+    var imageData = _.componentToBase64(nativeComponent, context);
+
+    _.sendMessage('receiveSelectionImage', {
+      imageData: imageData
+    });
+  };
+
   _.pluginActions.requestContext = function () {
-    var selectionSize = context.selection.count();
-    var selectedComponent;
-
-    if (selectionSize > 0) {
-      selectedComponent = _.sketch.fromNative(context.selection[0]);
-    }
-
     _.sendMessage('receiveContext', {
       authToken: _.Settings.settingForKey('auth-token'),
       selectionSize: selectionSize,
@@ -2098,7 +2119,7 @@ module.exports = function (context) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/83693b8e01a3f4b62b67b6988920a7ee.html").path();
+module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/82bda0819924d9f9056ac3561c67fd91.html").path();
 
 /***/ }),
 

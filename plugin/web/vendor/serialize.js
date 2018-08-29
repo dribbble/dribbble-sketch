@@ -33,13 +33,7 @@ function serialize(form, options) {
     var result = (options.hash) ? {} : '';
     var serializer = options.serializer || ((options.hash) ? hash_serializer : str_serialize);
 
-    var elements = []
-
-    if (form && form.elements) {
-      elements = form.elements;
-    } else {
-      elements = form.querySelectorAll('button,fieldset,input,output,select,textarea')
-    }
+    var elements = form && form.elements ? form.elements : [];
 
     //Object store each radio and set if it's empty or not
     var radio_store = Object.create(null);
@@ -48,7 +42,7 @@ function serialize(form, options) {
         var element = elements[i];
 
         // ingore disabled fields
-        if ((!options.disabled && element.disabled) || !element.getAttribute('name')) {
+        if ((!options.disabled && element.disabled) || !element.name) {
             continue;
         }
         // ignore anyhting that is not considered a success field
@@ -57,7 +51,7 @@ function serialize(form, options) {
             continue;
         }
 
-        var key = element.getAttribute('name');
+        var key = element.name;
         var val = element.value;
 
         // we can't just use element.value for checkboxes cause some browsers lie to us
@@ -75,11 +69,11 @@ function serialize(form, options) {
 
             // for radio
             if (element.type === 'radio') {
-                if (!radio_store[element.getAttribute('name')] && !element.checked) {
-                    radio_store[element.getAttribute('name')] = false;
+                if (!radio_store[element.name] && !element.checked) {
+                    radio_store[element.name] = false;
                 }
                 else if (element.checked) {
-                    radio_store[element.getAttribute('name')] = true;
+                    radio_store[element.name] = true;
                 }
             }
 

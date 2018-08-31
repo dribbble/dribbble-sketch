@@ -38,6 +38,14 @@ npm run watch
 npm run start
 ```
 
+If Sketch is crashing when you run the plugin, you may need to manually link the plugin:
+
+* Go to your Sketch plugins path: `/Users/USER/Library/Application Support/com.bohemiancoding.sketch3/Plugins`
+* Delete any instance of the plugin
+* Install the SKPM build tools globally: `npm install -g @skpm/builder`
+* Build (`skpm-build`) and Link (`skpm-link`) the plugin
+* Now you should be able to run the plugin with `npm run watch` running
+
 ### Creating releases
 
 This will change in the future but for now just do the following:

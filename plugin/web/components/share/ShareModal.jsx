@@ -51,7 +51,7 @@ module.exports = class ShareModal extends React.Component {
           </div>
         ) : (
           <div>
-            <Form selection={this.props.selection} preview={(
+            <Form ref="shotForm" selection={this.props.selection} preview={(
               <Preview
                 imageData={this.state.imageData}
                 width={this.props.selection.frame.width}

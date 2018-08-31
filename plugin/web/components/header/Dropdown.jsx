@@ -12,7 +12,7 @@ module.exports = class Dropdown extends React.Component {
 
   logout() {
     _.sendMessage('saveAuthToken', { token: '' })
-    _.sendMessage('closeBrowser')
+    window.location.reload()
   }
 
   launchAccount() {

@@ -29,6 +29,7 @@ module.exports = function(context) {
   _.pluginActions.setBrowserSize = function({ width, height, animated=false }={}) {
     const current = browser.getSize()
     browser.setSize(width || current[0], height || current[1], animated)
+    browser.center()
   }
 
   _.pluginActions.requestSelectionImage = function() {
@@ -48,6 +49,8 @@ module.exports = function(context) {
 
   browser.on('closed', () => { browser = null })
   browser.webContents.on('pluginMessage', _.receiveMessage)
+  browser.show()
+  browser.focus()
 
   const view = require('../web/main.html')
   browser.loadURL(view)

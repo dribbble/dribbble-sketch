@@ -98,7 +98,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "body {\n  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }\n  body * {\n    -webkit-user-select: none;\n    user-select: none;\n    -webkit-user-drag: none;\n    user-drag: none; }\n\n.default-cursor {\n  cursor: default; }\n\nbutton {\n  font-size: 13px;\n  padding: 9px 15px 9px;\n  line-height: 17px;\n  letter-spacing: .02em;\n  cursor: pointer;\n  border: none;\n  border-radius: 4px; }\n  button.adtl {\n    background: none;\n    color: #999;\n    box-shadow: 0px 0px 0px 1px #bbb inset; }\n    button.adtl:hover {\n      color: #444;\n      box-shadow: 0px 0px 0px 1px #777 inset; }\n  button.cta {\n    background: #ea4c89;\n    color: #fff; }\n    button.cta:hover {\n      background-color: #df3e7b; }\n\n.loading-button {\n  font-size: 13px;\n  padding: 9px 15px 9px;\n  line-height: 17px;\n  letter-spacing: .02em;\n  border: none;\n  border-radius: 4px;\n  background: #f8f8f8;\n  margin: 0 5px;\n  color: #777; }\n  .loading-button img {\n    width: 26px;\n    height: 26px;\n    margin: -10px 0 -10px -6px; }\n\n#login-header .container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 233px;\n  padding: 30px 40px 29px 40px;\n  box-sizing: border-box;\n  border-top: 3px solid #EA4C89; }\n\n#login-header .shot-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 308px;\n  height: 230px;\n  cursor: pointer; }\n\n#login-header .logo img {\n  width: 150px;\n  height: 36.54px;\n  margin-top: 9px;\n  cursor: pointer; }\n\n#login-header .info {\n  width: 280px;\n  margin-top: 25px;\n  position: relative;\n  z-index: 1; }\n  #login-header .info h1 {\n    font-size: 18px;\n    font-weight: 700; }\n  #login-header .info p {\n    margin-top: 10px;\n    font-size: 15px;\n    line-height: 20px; }\n  #login-header .info.light h1,\n  #login-header .info.light p {\n    color: #fff; }\n  #login-header .info.dark h1 {\n    color: #444; }\n  #login-header .info.dark p {\n    color: #555555; }\n\n#login-header .border {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 1px;\n  background-color: #E5E5E5; }\n\n#login-header .spacer {\n  height: 200px;\n  margin-bottom: 30px; }\n\n#login-footer {\n  padding: 25px 0; }\n  #login-footer .message {\n    text-align: center;\n    font-size: 16px;\n    line-height: 20px;\n    color: #525252;\n    margin: 0; }\n  #login-footer .container {\n    margin-top: 15px;\n    display: flex;\n    flex-direction: row; }\n  #login-footer .spacer {\n    flex: 1 0 0; }\n  #login-footer .container .button-group {\n    display: flex; }\n  #login-footer .container button {\n    margin: 0 5px; }\n\n#errors {\n  padding: 30px 40px; }\n  #errors .message {\n    font-size: 16px;\n    line-height: 23px;\n    color: #525252;\n    margin: 0; }\n\n#close-footer {\n  margin-top: 35px;\n  display: flex;\n  flex-direction: row; }\n  #close-footer .spacer {\n    flex: 1 0 0; }\n\n#share-header {\n  height: 82px;\n  margin-bottom: 30px; }\n  #share-header header {\n    position: absolute;\n    top: 0;\n    left: 0;\n    background-color: #fff;\n    width: calc(100% - 80px);\n    padding: 25px 40px 23px 40px;\n    border-top: 3px solid #EA4C89; }\n  #share-header .top-section {\n    display: flex;\n    flex-direction: row; }\n  #share-header .border {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 1px;\n    background-color: #E5E5E5; }\n  #share-header .logo {\n    flex: 0 0 78px; }\n    #share-header .logo img {\n      width: 78px;\n      height: 19px; }\n  #share-header .title {\n    display: flex;\n    flex-direction: row;\n    margin-top: 13px;\n    margin-bottom: 0; }\n    #share-header .title img {\n      width: 24px;\n      height: 24px;\n      flex: 0 0 24px; }\n    #share-header .title span {\n      margin-left: 9px;\n      font-size: 22px;\n      font-weight: 700;\n      color: #444; }\n\n#header-dropdown-container {\n  flex: 1 0 0;\n  text-align: right;\n  position: relative; }\n  #header-dropdown-container .trigger {\n    display: block;\n    padding: 15px 10px;\n    height: 5px;\n    position: absolute;\n    top: -6px;\n    right: 0;\n    border-top-left-radius: 5px;\n    border-top-right-radius: 5px;\n    cursor: pointer; }\n  #header-dropdown-container.active .trigger {\n    background: #333; }\n  #header-dropdown-container .dots {\n    width: 22px;\n    height: 5.5px;\n    vertical-align: top; }\n\n#dropdown-navigation {\n  background: #333;\n  display: none;\n  position: absolute;\n  top: 25px;\n  right: 0;\n  z-index: 1;\n  font-size: 14px;\n  line-height: 1.2;\n  text-align: left;\n  border-radius: 5px;\n  border-top-right-radius: 0; }\n  .active #dropdown-navigation {\n    display: block; }\n  #dropdown-navigation ul {\n    list-style-type: none;\n    padding: 10px 0;\n    margin: 0; }\n  #dropdown-navigation li.divider {\n    border-top: 1px solid rgba(255, 255, 255, 0.15);\n    padding-top: 8px;\n    margin-top: 8px; }\n  #dropdown-navigation a {\n    color: #999;\n    padding: 5px 15px;\n    text-decoration: none;\n    display: block; }\n    #dropdown-navigation a:hover {\n      color: #ddd;\n      background-color: rgba(255, 255, 255, 0.1); }\n\n#share-sheet {\n  padding: 30px 40px; }\n  #share-sheet .loading-container {\n    position: relative;\n    width: 100%;\n    height: 230px; }\n  #share-sheet .loading-image {\n    width: 32px;\n    height: 32px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-top: -16px;\n    margin-left: -16px; }\n  #share-sheet footer {\n    margin-top: 35px;\n    display: flex;\n    flex-direction: row; }\n  #share-sheet footer button {\n    margin-left: 10px; }\n  #share-sheet footer .spacer {\n    flex: 1 0 0; }\n\n#shot-form {\n  display: flex;\n  flex-direction: row; }\n  #shot-form .left-column {\n    flex: 0 0 240px; }\n  #shot-form .right-column {\n    flex: 1 0 0;\n    padding-left: 25px; }\n\n.checkbox-container {\n  cursor: pointer; }\n  .checkbox-container input[type=\"checkbox\"] {\n    margin-right: 10px; }\n  .checkbox-container span {\n    font-size: 14px;\n    color: #444;\n    vertical-align: middle; }\n\n.text-field-container {\n  margin-bottom: 10px;\n  display: block; }\n  .text-field-container span {\n    display: block;\n    font-size: 13px;\n    color: #999;\n    margin-bottom: 5px; }\n  .text-field-container input,\n  .text-field-container textarea {\n    width: 100%;\n    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);\n    padding: 9px 11px;\n    box-sizing: border-box;\n    border-radius: 6px;\n    color: #333;\n    border: none;\n    font-size: 15px;\n    background: rgba(0, 0, 0, 0.07);\n    -webkit-user-select: initial; }\n  .text-field-container textarea {\n    height: 100px; }\n\n#shot-preview {\n  width: 240px;\n  margin-bottom: 15px;\n  border: 1px solid #E1E1E1;\n  border-radius: 4px;\n  padding: 9px;\n  box-sizing: border-box; }\n  #shot-preview img {\n    width: 220px;\n    vertical-align: bottom; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }\n  body * {\n    -webkit-user-select: none;\n    user-select: none;\n    -webkit-user-drag: none;\n    user-drag: none; }\n\n.default-cursor {\n  cursor: default; }\n\nbutton {\n  font-size: 13px;\n  padding: 9px 15px 9px;\n  line-height: 17px;\n  letter-spacing: .02em;\n  cursor: pointer;\n  border: none;\n  border-radius: 4px; }\n  button.adtl {\n    background: none;\n    color: #999;\n    box-shadow: 0px 0px 0px 1px #bbb inset; }\n    button.adtl:hover {\n      color: #444;\n      box-shadow: 0px 0px 0px 1px #777 inset; }\n    button.adtl:active {\n      color: #3a8bbb;\n      box-shadow: 0px 0px 0px 1px #3a8bbb inset; }\n  button.cta {\n    background: #ea4c89;\n    color: #fff; }\n    button.cta:hover {\n      background-color: #df3e7b; }\n    button.cta:active {\n      background-color: #c22b65; }\n\n.loading-button {\n  font-size: 13px;\n  padding: 9px 15px 9px;\n  line-height: 17px;\n  letter-spacing: .02em;\n  border: none;\n  border-radius: 4px;\n  background: #f8f8f8;\n  margin: 0 5px;\n  color: #777; }\n  .loading-button img {\n    width: 26px;\n    height: 26px;\n    margin: -10px 0 -10px -6px; }\n\n.tool-tip {\n  position: relative;\n  display: inline-block; }\n  .tool-tip img {\n    width: 14px;\n    height: 14px;\n    margin-bottom: -2px;\n    margin-left: 5px;\n    margin-right: 5px; }\n  .tool-tip p {\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    background-color: #333;\n    color: #EBEBEB;\n    font-size: 12px;\n    line-height: 17px;\n    max-width: 200px;\n    width: 180px;\n    text-align: center;\n    padding: 10px;\n    border-radius: 3px;\n    margin: 0;\n    opacity: 0;\n    visibility: hidden; }\n    .tool-tip p.right {\n      left: 100%; }\n      .tool-tip p.right:after {\n        right: 100%;\n        top: 50%;\n        border: solid transparent;\n        content: '';\n        height: 0;\n        width: 0;\n        position: absolute;\n        pointer-events: none;\n        border-color: transparent;\n        border-right-color: #333;\n        border-width: 5px;\n        margin-top: -5px; }\n    .tool-tip p.left {\n      right: 100%; }\n      .tool-tip p.left:after {\n        left: 100%;\n        top: 50%;\n        border: solid transparent;\n        content: '';\n        height: 0;\n        width: 0;\n        position: absolute;\n        pointer-events: none;\n        border-color: transparent;\n        border-left-color: #333;\n        border-width: 5px;\n        margin-top: -5px; }\n  .tool-tip:hover > p {\n    opacity: 1;\n    visibility: visible; }\n\n#login-header .container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 233px;\n  padding: 30px 40px 29px 40px;\n  box-sizing: border-box;\n  border-top: 3px solid #EA4C89;\n  border-top-left-radius: 4px;\n  border-top-right-radius: 4px; }\n\n#login-header .shot-image {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 308px;\n  height: 230px;\n  cursor: pointer; }\n\n#login-header .logo img {\n  width: 150px;\n  height: 36.54px;\n  margin-top: 9px;\n  cursor: pointer; }\n\n#login-header .info {\n  width: 280px;\n  margin-top: 25px;\n  position: relative;\n  z-index: 1; }\n  #login-header .info h1 {\n    font-size: 18px;\n    font-weight: 6f00; }\n  #login-header .info p {\n    margin-top: 10px;\n    font-size: 15px;\n    line-height: 20px; }\n  #login-header .info.light h1,\n  #login-header .info.light p {\n    color: #fff; }\n  #login-header .info.dark h1 {\n    color: #444; }\n  #login-header .info.dark p {\n    color: #555555; }\n\n#login-header .border {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 1px;\n  background-color: #E5E5E5; }\n\n#login-header .spacer {\n  height: 200px;\n  margin-bottom: 30px; }\n\n#login-footer {\n  padding: 25px 0; }\n  #login-footer .message {\n    text-align: center;\n    font-size: 16px;\n    line-height: 20px;\n    color: #525252;\n    margin: 0; }\n  #login-footer .container {\n    margin-top: 15px;\n    display: flex;\n    flex-direction: row; }\n  #login-footer .spacer {\n    flex: 1 0 0; }\n  #login-footer .container .button-group {\n    display: flex; }\n  #login-footer .container button {\n    margin: 0 5px; }\n\n#errors {\n  padding: 30px 40px; }\n  #errors .message {\n    font-size: 16px;\n    line-height: 23px;\n    color: #525252;\n    margin: 0; }\n\n#close-footer {\n  margin-top: 35px;\n  display: flex;\n  flex-direction: row; }\n  #close-footer .spacer {\n    flex: 1 0 0; }\n\n#share-header {\n  height: 82px;\n  margin-bottom: 30px; }\n  #share-header header {\n    position: absolute;\n    top: 0;\n    left: 0;\n    background-color: #fff;\n    width: calc(100% - 80px);\n    padding: 25px 40px 23px 40px;\n    border-top: 3px solid #EA4C89;\n    border-top-left-radius: 4px;\n    border-top-right-radius: 4px; }\n  #share-header .top-section {\n    display: flex;\n    flex-direction: row; }\n  #share-header .border {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 1px;\n    background-color: #E5E5E5; }\n  #share-header .logo {\n    flex: 0 0 78px; }\n    #share-header .logo img {\n      width: 78px;\n      height: 19px; }\n  #share-header .title {\n    display: flex;\n    flex-direction: row;\n    margin-top: 13px;\n    margin-bottom: 0; }\n    #share-header .title img {\n      width: 24px;\n      height: 24px;\n      flex: 0 0 24px; }\n    #share-header .title span {\n      margin-left: 9px;\n      font-size: 22px;\n      font-weight: 600;\n      color: #444; }\n\n#header-dropdown-container {\n  flex: 1 0 0;\n  text-align: right;\n  position: relative; }\n  #header-dropdown-container .trigger {\n    display: block;\n    padding: 15px 10px;\n    height: 5px;\n    position: absolute;\n    top: -6px;\n    right: 0;\n    border-top-left-radius: 5px;\n    border-top-right-radius: 5px;\n    cursor: pointer; }\n  #header-dropdown-container.active .trigger {\n    background: #333; }\n  #header-dropdown-container:not(.active) .trigger:hover {\n    background: #eee;\n    border-bottom-left-radius: 5px;\n    border-bottom-right-radius: 5px; }\n  #header-dropdown-container .dots {\n    width: 22px;\n    height: 5.5px;\n    vertical-align: top; }\n\n#dropdown-navigation {\n  background: #333;\n  display: none;\n  position: absolute;\n  top: 25px;\n  right: 0;\n  z-index: 1;\n  font-size: 14px;\n  line-height: 1.2;\n  text-align: left;\n  border-radius: 5px;\n  border-top-right-radius: 0; }\n  .active #dropdown-navigation {\n    display: block; }\n  #dropdown-navigation ul {\n    list-style-type: none;\n    padding: 10px 0;\n    margin: 0; }\n  #dropdown-navigation li.divider {\n    border-top: 1px solid rgba(255, 255, 255, 0.15);\n    padding-top: 8px;\n    margin-top: 8px; }\n  #dropdown-navigation a {\n    color: #999;\n    padding: 5px 15px;\n    text-decoration: none;\n    display: block; }\n    #dropdown-navigation a:hover {\n      color: #ddd;\n      background-color: rgba(255, 255, 255, 0.1); }\n    #dropdown-navigation a:active {\n      color: #ddd;\n      background-color: rgba(0, 0, 0, 0.3); }\n\n#share-sheet {\n  padding: 30px 40px; }\n  #share-sheet .loading-container {\n    position: relative;\n    width: 100%;\n    height: 230px; }\n  #share-sheet .loading-image {\n    width: 32px;\n    height: 32px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-top: -16px;\n    margin-left: -16px; }\n  #share-sheet footer {\n    margin-top: 35px;\n    display: flex;\n    flex-direction: row; }\n  #share-sheet footer button {\n    margin-left: 10px; }\n  #share-sheet footer .spacer {\n    flex: 1 0 0; }\n\n#shot-form {\n  display: flex;\n  flex-direction: row; }\n  #shot-form .left-column {\n    flex: 0 0 240px; }\n  #shot-form .right-column {\n    flex: 1 0 0;\n    padding-left: 25px; }\n\n.checkbox-container {\n  cursor: pointer; }\n  .checkbox-container input[type=\"checkbox\"] {\n    margin-right: 10px;\n    cursor: pointer; }\n  .checkbox-container span {\n    font-size: 14px;\n    color: #444;\n    vertical-align: middle; }\n\n.text-field-container {\n  margin-bottom: 10px;\n  display: block; }\n  .text-field-container span {\n    display: block;\n    font-size: 13px;\n    color: #999;\n    margin-bottom: 5px;\n    cursor: pointer; }\n  .text-field-container input,\n  .text-field-container textarea {\n    width: 100%;\n    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);\n    padding: 9px 11px;\n    box-sizing: border-box;\n    border-radius: 6px;\n    color: #333;\n    border: none;\n    font-size: 15px;\n    background: rgba(0, 0, 0, 0.07);\n    -webkit-user-select: initial; }\n  .text-field-container textarea {\n    height: 100px; }\n\n#shot-preview {\n  width: 240px;\n  margin-bottom: 15px;\n  border: 1px solid #E1E1E1;\n  border-radius: 4px;\n  padding: 9px;\n  box-sizing: border-box; }\n  #shot-preview img {\n    width: 220px;\n    vertical-align: bottom; }\n\n.tokenfield {\n  position: relative; }\n\n.tokenfield:before, .tokenfield:after {\n  content: \" \";\n  display: table; }\n\n.tokenfield:after {\n  clear: both; }\n\n.tokenfield.tokenfield-mode-tokens {\n  display: block;\n  width: 100%;\n  min-height: 34px;\n  padding: 6px 12px 0;\n  font-size: 14px;\n  line-height: 1.42857;\n  color: #555555;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;\n  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;\n  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }\n\n.tokenfield.tokenfield-mode-tokens:focus {\n  border-color: #66afe9;\n  outline: 0;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }\n\n.tokenfield.tokenfield-mode-tokens::-moz-placeholder {\n  color: #999;\n  opacity: 1; }\n\n.tokenfield.tokenfield-mode-tokens:-ms-input-placeholder {\n  color: #999; }\n\n.tokenfield.tokenfield-mode-tokens::-webkit-input-placeholder {\n  color: #999; }\n\n.tokenfield.tokenfield-mode-tokens::-ms-expand {\n  border: 0;\n  background-color: transparent; }\n\n.tokenfield.tokenfield-mode-tokens[disabled], .tokenfield.tokenfield-mode-tokens[readonly],\nfieldset[disabled] .tokenfield.tokenfield-mode-tokens {\n  background-color: #eeeeee;\n  opacity: 1; }\n\n.tokenfield.tokenfield-mode-tokens[disabled],\nfieldset[disabled] .tokenfield.tokenfield-mode-tokens {\n  cursor: not-allowed; }\n\n.tokenfield.tokenfield-mode-tokens .focused {\n  box-shadow: 0 0 0 1px #337ab7 inset; }\n\n.tokenfield.tokenfield-mode-tokens .selected {\n  background: rgba(0, 0, 0, 0.1); }\n\n.tokenfield .tokenfield-set > ul {\n  margin: 0;\n  padding: 0;\n  list-style-type: none; }\n\n.tokenfield .tokenfield-set > ul > li {\n  float: left;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  padding: 0 5px;\n  border-radius: 4px;\n  line-height: 1.5;\n  cursor: pointer;\n  color: rgba(0, 0, 0, 0.6);\n  background: rgba(0, 0, 0, 0.08); }\n\n.tokenfield .tokenfield-set > ul > li:hover {\n  color: black;\n  background: rgba(0, 0, 0, 0.16); }\n\n.tokenfield .tokenfield-set > ul > li .item-remove {\n  display: inline-block;\n  font-weight: bold;\n  font-size: 0.9285em;\n  cursor: pointer;\n  color: rgba(0, 0, 0, 0.4); }\n\n.tokenfield .tokenfield-input {\n  margin-bottom: 5px;\n  border: none;\n  outline: none;\n  float: left; }\n\n.tokenfield .tokenfield-suggest {\n  position: absolute;\n  left: -1px;\n  top: 100%;\n  width: 100%;\n  z-index: 10;\n  overflow: auto;\n  background-color: #fff;\n  border: 1px solid rgba(0, 0, 0, 0.15);\n  border-radius: 4px;\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n  box-sizing: content-box; }\n\n.tokenfield .tokenfield-suggest > ul {\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\n.tokenfield .tokenfield-suggest > ul > li {\n  padding: 6px 10px;\n  cursor: pointer; }\n", ""]);
 
 // exports
 
@@ -20745,6 +20745,11 @@ function (_React$Component) {
       _.sendMessage('closeBrowser');
     }
   }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.refs.okayBtn.focus();
+    }
+  }, {
     key: "render",
     value: function render() {
       return React.createElement("footer", {
@@ -20753,12 +20758,136 @@ function (_React$Component) {
         className: "spacer"
       }), React.createElement("button", {
         className: "cta",
-        onClick: this.dismissDialog.bind(this)
+        onClick: this.dismissDialog.bind(this),
+        ref: "okayBtn"
       }, "Okay"));
     }
   }]);
 
   return CloseFooter;
+}(React.Component);
+
+/***/ }),
+
+/***/ "./plugin/web/components/common/Tip.jsx":
+/*!**********************************************!*\
+  !*** ./plugin/web/components/common/Tip.jsx ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+module.exports =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Tip, _React$Component);
+
+  function Tip(props) {
+    _classCallCheck(this, Tip);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Tip).call(this, props));
+  }
+
+  _createClass(Tip, [{
+    key: "render",
+    value: function render() {
+      return React.createElement("div", {
+        className: "tool-tip"
+      }, React.createElement("img", {
+        src: "../web/images/icon-help-circle.png"
+      }), React.createElement("p", {
+        className: this.props.position
+      }, this.props.text));
+    }
+  }]);
+
+  return Tip;
+}(React.Component);
+
+/***/ }),
+
+/***/ "./plugin/web/components/common/TokenField.jsx":
+/*!*****************************************************!*\
+  !*** ./plugin/web/components/common/TokenField.jsx ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+module.exports =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(TokenField, _React$Component);
+
+  function TokenField(props) {
+    _classCallCheck(this, TokenField);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(TokenField).call(this, props));
+  }
+
+  _createClass(TokenField, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {// new _.tokenfield({
+      //   el: this.refs.field
+      // })
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return React.createElement("input", _extends({
+        ref: "field",
+        type: "text"
+      }, this.props));
+    }
+  }]);
+
+  return TokenField;
 }(React.Component);
 
 /***/ }),
@@ -20906,7 +21035,7 @@ function (_React$Component) {
         token: ''
       });
 
-      _.sendMessage('closeBrowser');
+      window.location.reload();
     }
   }, {
     key: "launchAccount",
@@ -21001,11 +21130,11 @@ var Dropdown = __webpack_require__(/*! ./Dropdown.jsx */ "./plugin/web/component
 var titleTypes = {
   error: {
     text: 'Whoops!',
-    icon: 'sad-face.png'
+    icon: 'x-cloud.png'
   },
   connection: {
     text: 'No connection',
-    icon: 'no-connection.png'
+    icon: 'x-cloud.png'
   },
   share: {
     text: 'Share this selection',
@@ -21112,13 +21241,23 @@ function (_React$Component) {
         login: 'To share your work from Sketch, please log in.',
         loading: 'Please visit the page opened in your browser.',
         error: 'Something went wrong. Want to try again?',
-        success: 'You’re all set! Re-open this dialog to start sharing.'
+        success: 'You’re all set! Select a layer to start sharing.'
       }[status];
     }
   }, {
     key: "dismissDialog",
     value: function dismissDialog() {
       _.sendMessage('closeBrowser');
+    }
+  }, {
+    key: "reloadBrowser",
+    value: function reloadBrowser() {
+      window.location.reload();
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.refs.loginBtn.focus();
     }
   }, {
     key: "launchLogin",
@@ -21158,6 +21297,8 @@ function (_React$Component) {
           _this2.setState({
             status: 'success'
           });
+
+          _this2.refs.okayBtn.focus();
         }).catch(function (error) {
           _this2.setState({
             status: 'error'
@@ -21181,8 +21322,9 @@ function (_React$Component) {
       }, React.createElement("div", {
         className: "spacer"
       }), this.state.status === 'success' ? React.createElement("button", {
-        onClick: this.dismissDialog.bind(this),
-        className: "cta"
+        onClick: this.reloadBrowser.bind(this),
+        className: "cta",
+        ref: "okayBtn"
       }, "Okay") : React.createElement("div", {
         className: "button-group"
       }, React.createElement("button", {
@@ -21196,7 +21338,8 @@ function (_React$Component) {
         className: "default-cursor"
       }, "Waiting...")) : React.createElement("button", {
         onClick: this.launchLogin.bind(this),
-        className: "cta"
+        className: "cta",
+        ref: "loginBtn"
       }, "Log in to Dribbble")), React.createElement("div", {
         className: "spacer"
       })));
@@ -21501,6 +21644,10 @@ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _ = __webpack_require__(/*! ../../library/utils */ "./plugin/web/library/utils.js");
 
+var Tip = __webpack_require__(/*! ../common/Tip.jsx */ "./plugin/web/components/common/Tip.jsx");
+
+var TokenField = __webpack_require__(/*! ../common/TokenField.jsx */ "./plugin/web/components/common/TokenField.jsx");
+
 module.exports =
 /*#__PURE__*/
 function (_React$Component) {
@@ -21513,6 +21660,12 @@ function (_React$Component) {
   }
 
   _createClass(Form, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.refs.titleField.focus();
+      this.refs.titleField.select();
+    }
+  }, {
     key: "render",
     value: function render() {
       return React.createElement("form", {
@@ -21526,24 +21679,33 @@ function (_React$Component) {
         type: "checkbox",
         name: "low_profile",
         value: "true"
-      }), React.createElement("span", null, "Hide from my profile"))), React.createElement("div", {
+      }), React.createElement("span", null, "Hide from my default profile", React.createElement(Tip, {
+        position: "right",
+        text: "Shots that are hidden from your default profile stream are called \u201CLow Profile\u201D shots. These shots are visible via a menu on your profile."
+      })))), React.createElement("div", {
         className: "right-column"
       }, React.createElement("label", {
         className: "text-field-container"
       }, React.createElement("span", null, "Title"), React.createElement("input", {
+        ref: "titleField",
         type: "text",
         name: "title",
         placeholder: "Title of your shot",
         defaultValue: this.props.selection.name
       })), React.createElement("label", {
         className: "text-field-container"
-      }, React.createElement("span", null, "Tags"), React.createElement("input", {
-        type: "text",
+      }, React.createElement("span", null, "Tags", React.createElement(Tip, {
+        position: "left",
+        text: "Start typing tags. Hit tab, comma, or return to complete. Hit backspace/delete to remove."
+      })), React.createElement(TokenField, {
         name: "tags",
         placeholder: "sketch"
       })), React.createElement("label", {
         className: "text-field-container"
-      }, React.createElement("span", null, "Description"), React.createElement("textarea", {
+      }, React.createElement("span", null, "Description", React.createElement(Tip, {
+        position: "left",
+        text: "URLs are automatically hyperlinked. Line breaks and paragraphs are automatically generated. a, em, strong and code HTML tags are accepted."
+      })), React.createElement("textarea", {
         name: "description",
         placeholder: "Tell us about your process and how you arrived at this design"
       }))));
@@ -21731,6 +21893,7 @@ function (_React$Component) {
         className: "loading-image",
         src: "../web/images/processing.gif"
       })) : React.createElement("div", null, React.createElement(Form, {
+        ref: "shotForm",
         selection: this.props.selection,
         preview: React.createElement(Preview, {
           imageData: this.state.imageData,

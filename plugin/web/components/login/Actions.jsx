@@ -16,12 +16,20 @@ module.exports = class Actions extends React.Component {
       login: 'To share your work from Sketch, please log in.',
       loading: 'Please visit the page opened in your browser.',
       error: 'Something went wrong. Want to try again?',
-      success: 'You’re all set! Re-open this dialog to start sharing.'
+      success: 'You’re all set! Select a layer to start sharing.'
     })[status]
   }
 
   dismissDialog() {
     _.sendMessage('closeBrowser')
+  }
+
+  reloadBrowser() {
+    window.location.reload()
+  }
+
+  componentDidMount() {
+    this.refs.loginBtn.focus()
   }
 
   launchLogin() {
@@ -47,6 +55,7 @@ module.exports = class Actions extends React.Component {
       response.json().then((data) => {
         _.sendMessage('saveAuthToken', { token: data.token })
         this.setState({ status: 'success' })
+        this.refs.okayBtn.focus()
       }).catch((error) => {
         this.setState({ status: 'error' })
       })
@@ -63,7 +72,7 @@ module.exports = class Actions extends React.Component {
         <footer className="container">
           <div className="spacer"></div>
           { this.state.status === 'success' ? (
-            <button onClick={this.dismissDialog.bind(this)} className="cta">Okay</button>
+            <button onClick={this.reloadBrowser.bind(this)} className="cta" ref="okayBtn">Okay</button>
           ) : (
             <div className="button-group">
               <button onClick={this.dismissDialog.bind(this)} className="adtl">Cancel</button>
@@ -73,7 +82,7 @@ module.exports = class Actions extends React.Component {
                   <span className="default-cursor">Waiting...</span>
                 </div>
               ) : (
-                <button onClick={this.launchLogin.bind(this)} className="cta">Log in to Dribbble</button>
+                <button onClick={this.launchLogin.bind(this)} className="cta" ref="loginBtn">Log in to Dribbble</button>
               ) }
             </div>
           ) }

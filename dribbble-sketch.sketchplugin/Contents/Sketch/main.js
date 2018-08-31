@@ -2082,6 +2082,7 @@ module.exports = function (context) {
 
     var current = browser.getSize();
     browser.setSize(width || current[0], height || current[1], animated);
+    browser.center();
   };
 
   _.pluginActions.requestSelectionImage = function () {
@@ -2104,6 +2105,8 @@ module.exports = function (context) {
     browser = null;
   });
   browser.webContents.on('pluginMessage', _.receiveMessage);
+  browser.show();
+  browser.focus();
 
   var view = __webpack_require__(/*! ../web/main.html */ "./plugin/web/main.html");
 
@@ -2119,7 +2122,7 @@ module.exports = function (context) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/82bda0819924d9f9056ac3561c67fd91.html").path();
+module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/05568db64cba4b469091cc5fa001ac71.html").path();
 
 /***/ }),
 

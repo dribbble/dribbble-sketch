@@ -7,9 +7,9 @@
     "sketch": ">=3.0"
   },
   "skpm": {
-    "name": "dribbble-sketch",
+    "name": "dribbble",
     "manifest": "plugin/sketch/manifest.json",
-    "main": "dribbble-sketch.sketchplugin",
+    "main": "dribbble.sketchplugin",
     "resources": [
       "plugin/web/main.js"
     ],

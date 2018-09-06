@@ -11,11 +11,16 @@ module.exports = class Form extends React.Component {
   componentDidMount() {
     this.refs.titleField.focus()
     this.refs.titleField.select()
+    this.props.setTitleState(this.refs.titleField.value)
   }
 
   render() {
     return (
       <form id="shot-form" ref="shotForm">
+        { this.props.selectedAccount ? (
+          <input type="hidden" name="team_id" value={this.props.selectedAccount} />
+        ) : null }
+
         <div className="left-column">
           { this.props.preview }
 
@@ -31,7 +36,7 @@ module.exports = class Form extends React.Component {
         <div className="right-column">
           <label className="text-field-container">
             <span>Title</span>
-            <input ref="titleField" type="text" name="title" placeholder="Title of your shot" defaultValue={this.props.selection.name} />
+            <input ref="titleField" type="text" name="title" placeholder="Title of your shot" defaultValue={this.props.selection.name} onChange={this.props.setTitleState} />
           </label>
 
           <label className="text-field-container">

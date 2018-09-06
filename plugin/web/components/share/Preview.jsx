@@ -1,7 +1,7 @@
 const React = require('react')
 const _ = require('../../library/utils')
 
-module.exports = class Form extends React.Component {
+module.exports = class Preview extends React.Component {
   constructor(props) {
     super(props)
 

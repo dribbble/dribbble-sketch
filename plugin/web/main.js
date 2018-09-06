@@ -11,6 +11,7 @@ const ShareModal = require('./components/share/ShareModal.jsx')
 
 _.pluginActions.receiveContext = function(context) {
   const authToken = context.authToken
+  const userDetails = context.userDetails
   let Component, props = {}
 
   if (!navigator.onLine) {
@@ -29,7 +30,7 @@ _.pluginActions.receiveContext = function(context) {
     props = { type: 'tooSmall', selection: context.selection }
   } else {
     Component = ShareModal
-    props = { selection: context.selection, auth: authToken }
+    props = { selection: context.selection, user: userDetails, auth: authToken }
   }
 
   ReactDOM.render(

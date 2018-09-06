@@ -22,6 +22,9 @@ let pluginActions = {
   saveAuthToken({ token }) {
     Settings.setSettingForKey('auth-token', token)
   },
+  saveUserDetails({ user }) {
+    Settings.setSettingForKey('user-details', user)
+  },
   openURL({ url }) {
     openURL(url)
   }

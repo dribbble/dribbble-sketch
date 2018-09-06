@@ -6,6 +6,10 @@ const titleTypes = {
     text: 'Whoops!',
     icon: 'x-cloud.png'
   },
+  success: {
+    text: 'Success!',
+    icon: 'check-cloud.png'
+  },
   connection: {
     text: 'No connection',
     icon: 'x-cloud.png'

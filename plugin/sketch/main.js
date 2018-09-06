@@ -40,6 +40,7 @@ module.exports = function(context) {
   _.pluginActions.requestContext = function() {
     _.sendMessage('receiveContext', {
       authToken: _.Settings.settingForKey('auth-token'),
+      userDetails: _.Settings.settingForKey('user-details'),
       selectionSize: selectionSize,
       selection: selectedComponent != null
         ? selectedComponent.toJSON()

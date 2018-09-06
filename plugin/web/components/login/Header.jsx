@@ -26,12 +26,12 @@ module.exports = class Header extends React.Component {
           <div className="shot-image" style={{ backgroundImage: `url('../web/images/shots/${this.state.shot.filename}')`, backgroundSize: 'cover' }} title={`${this.state.shot.title} by ${this.state.shot.user}`} onClick={(this.launchShot.bind(this))} />
 
           <div className="logo" onClick={this.launchSite}>
-            <img src={`../web/images/dribbble-logo-large-${this.state.shot.theme}.png`} />
+            <img src={`../web/images/dribbble-logo-large-${this.state.shot.logo}.png`} />
           </div>
 
           <div className={`info ${this.state.shot.theme}`}>
-            <h1 className="default-cursor">What are you working on?</h1>
-            <p className="default-cursor">Dribbble is a community of designers sharing screenshots of their work, process, and projects.</p>
+            <h1 className="default-cursor" style={{ color: this.state.shot.headingColor }}>What are you working on?</h1>
+            <p className="default-cursor" style={{ color: this.state.shot.textColor }}>Dribbble is a community of designers sharing screenshots of their work, process, and projects.</p>
           </div>
 
           <div className="border" />

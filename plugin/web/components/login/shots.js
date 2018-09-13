@@ -25,8 +25,8 @@ module.exports = [
     title: 'MyTaxi Driver',
     url: 'https://dribbble.com/shots/4015806-MyTaxi-Driver',
     backgroundColor: '#FECC02',
-    textColor: '#3d67ff',
-    headingColor: '#3d67ff',
+    textColor: '#494949',
+    headingColor: '#FDFDFD',
     logo: 'dark'
   },
   {
@@ -35,8 +35,8 @@ module.exports = [
     title: 'Wednesday',
     url: 'https://dribbble.com/shots/3050083-Wednesday',
     backgroundColor: '#F5F4E1',
-    textColor: '#444',
-    headingColor: '#444',
+    textColor: '#3F4037',
+    headingColor: '#9FD554',
     logo: 'dark'
   },
   {
@@ -46,7 +46,7 @@ module.exports = [
     url: 'https://dribbble.com/shots/4794274-Friday-Beers',
     backgroundColor: '#406DEB',
     textColor: '#fff',
-    headingColor: '#fff',
+    headingColor: '#E7B70C',
     logo: 'light'
   },
   {
@@ -55,8 +55,8 @@ module.exports = [
     title: 'Carrier Pigeon',
     url: 'https://dribbble.com/shots/4833060-Carrier-Pigeon',
     backgroundColor: '#75D999',
-    textColor: '#fff',
-    headingColor: '#fffd8f',
+    textColor: '#FFFFEE',
+    headingColor: '#4D4D4D',
     logo: 'light'
   },
   {

@@ -13,8 +13,8 @@ const errorMessages = {
   multipleSelection() {
     return 'You’ve selected more than one Layer. Please select one and try again.'
   },
-  tooSmall() {
-    return `Your selection is ${this.props.selection.frame.width}px × ${this.props.selection.frame.height}px, which is too small. Dribbble requires Shots to be at least ${_.config.dimensionReqs.width}px × ${_.config.dimensionReqs.height}px.`
+  badSize() {
+    return `Your selection is ${this.props.selection.frame.width}px × ${this.props.selection.frame.height}px. Dribbble requires Shots to be ${_.config.dimensionReqs.small.width}px × ${_.config.dimensionReqs.small.height}px or ${_.config.dimensionReqs.large.width}px × ${_.config.dimensionReqs.large.height}px.`
   }
 }
 

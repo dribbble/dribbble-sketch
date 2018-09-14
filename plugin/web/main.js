@@ -25,9 +25,9 @@ _.pluginActions.receiveContext = function(context) {
   } else if (context.selectionSize > 1) {
      Component = ErrorModal
      props = { type: 'multipleSelection' }
-  } else if (_.selectionTooSmall(context.selection)) {
+  } else if (_.notExactSize(context.selection)) {
     Component = ErrorModal
-    props = { type: 'tooSmall', selection: context.selection }
+    props = { type: 'badSize', selection: context.selection }
   } else {
     Component = ShareModal
     props = { selection: context.selection, user: userDetails, auth: authToken }

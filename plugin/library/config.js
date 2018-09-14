@@ -8,7 +8,13 @@ module.exports = {
   helpUrl: `https://help.dribbble.com/`,
 
   dimensionReqs: {
-    width: 400,
-    height: 300
+    small: {
+      width: 400,
+      height: 300
+    },
+    large: {
+      width: 800,
+      height: 600
+    }
   }
 }

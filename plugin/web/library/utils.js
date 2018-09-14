@@ -35,6 +35,23 @@ const selectionTooSmall = function(selection) {
 }
 
 /**
+ * Check against our internal dimension requirements
+ * to if the selection meets one of our dimension requirements
+ */
+const notExactSize = function(selection) {
+  const exactSmall = selection.frame.width === _global.config.dimensionReqs.small.width &&
+                     selection.frame.height === _global.config.dimensionReqs.small.height
+  const exactLarge = selection.frame.width === _global.config.dimensionReqs.large.width &&
+                     selection.frame.height === _global.config.dimensionReqs.large.height
+
+  if (exactSmall || exactLarge) {
+    return false
+  } else {
+    return true
+  }
+}
+
+/**
  * Wrapper for Fetch that will retry X number of times
  * with Y delay in between retries before giving up
  */
@@ -113,6 +130,7 @@ module.exports = Object.assign(_global, {
   pluginActions,
   receiveMessage,
   selectionTooSmall,
+  notExactSize,
   retriableFetch,
   serializeObject,
   b64toBlob,

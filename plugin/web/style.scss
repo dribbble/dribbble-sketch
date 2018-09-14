@@ -654,3 +654,61 @@ button {
     margin-bottom: 20px;
   }
 }
+
+.tags-input {
+  min-height: 29px;
+  padding: 4px 5px;
+  background: rgba(0, 0, 0, 0.07);
+  border: none;
+  width: 16em;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-user-select: initial;
+}
+
+.tags-input .tag {
+  display: inline-block;
+  background: #fff;
+  font-size: 14px;
+  color: #444;
+  padding: 2px 6px;
+  margin: 3px;
+  box-shadow: 0 1px 2px rgba(68,68,68,0.25);
+  border-radius: 4px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  transition: all .1s ease
+}
+
+.tags-input .tag.selected {
+  background: #3a8bbb;
+  color: #fff;
+  background-clip: padding-box;
+}
+
+.tags-input .tag.dupe {
+  -webkit-transform: scale3d(1.2, 1.2, 1.2);
+  transform: scale3d(1.2, 1.2, 1.2);
+  background-color: #FCC;
+  border-color: #700
+}
+
+.tags-input input {
+  -webkit-appearance: none!important;
+  appearance: none!important;
+  display: inline-block!important;
+  padding: 3px;
+  margin: 2px 3px;
+  background: 0 0!important;
+  border: none!important;
+  box-shadow: none!important;
+  font: inherit!important;
+  font-size: 15px!important;
+  outline: 0!important;
+  color: #333!important;
+}
+
+.tags-input .selected~input {
+  opacity: .3
+}

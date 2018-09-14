@@ -44,7 +44,7 @@ module.exports = class Form extends React.Component {
               Tags
               <Tip position="left" text="Start typing tags. Hit tab, comma, or return to complete. Hit backspace/delete to remove." />
             </span>
-            <TokenField name="tags" placeholder="sketch" />
+            <TokenField name="tags" defaultValue="sketch" />
           </label>
 
           <label className="text-field-container">

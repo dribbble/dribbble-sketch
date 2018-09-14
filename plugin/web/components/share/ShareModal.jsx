@@ -73,6 +73,7 @@ module.exports = class ShareModal extends React.Component {
     this.setState({ submitting: true })
 
     const formData = new FormData(this.refs.shotForm.refs.shotForm)
+    formData.set('tags', formData.get('tags').split(','))
     const imageBlob = _.b64toBlob(this.state.imageData, 'image/png')
     formData.append('image', imageBlob)
 

@@ -92,15 +92,38 @@ module.exports = class ShareModal extends React.Component {
           status: 'success',
           shotUrl: `${_.config.siteUrl}/shots/${splitUrl[splitUrl.length - 1]}`
         })
-      } else {
-        this.setState({
-          headerType: 'error',
-          status: 'error'
-        })
-      }
 
-      this.setDialogHeight()
+        this.setDialogHeight()
+      } else {
+        try {
+          response.json().then((data) => {
+            if (data.errors && data.errors[0].message.includes('daily limit')) {
+              this.setState({
+                headerType: 'error',
+                status: 'limit'
+              })
+
+              this.setDialogHeight()
+            } else {
+              this.showError(data)
+            }
+          })
+        } catch(error) {
+          this.showError(error)
+        }
+      }
+    }).catch(this.showError.bind(this))
+  }
+
+  showError(error) {
+    console.log(error)
+
+    this.setState({
+      headerType: 'error',
+      status: 'error'
     })
+
+    this.setDialogHeight()
   }
 
   setTitleState(input) {
@@ -137,24 +160,54 @@ module.exports = class ShareModal extends React.Component {
       break
     case 'success':
       var view = (
-        <div id="share-message">
-          <p>
-            Your shot has been posted. You can <a href="#" onClick={this.launchShot.bind(this)}>see it here</a>.
-          </p>
+        <div id="share-results-container">
+          <div className="body-container">
+            <p className="shot-success">Your shot has been posted!</p>
 
-          <button onClick={this.dismissDialog.bind(this)} className="adtl">Okay</button>
+            <Preview
+              imageData={this.state.imageData}
+              width={this.props.selection.frame.width}
+              height={this.props.selection.frame.height}
+            />
+          </div>
+
+          <footer id="close-footer">
+            <div className="spacer"></div>
+            <button className="adtl" onClick={this.launchShot.bind(this)}>Open in Browser</button>
+            <button className="cta" onClick={this.dismissDialog.bind(this)}>Okay</button>
+          </footer>
         </div>
       )
       break
     case 'error':
       var view = (
-        <div id="share-message">
-          <p>
-            Something went wrong on our end. You might want to try again. If this issue
-            continues please <a href="#" onClick={this.launchContact.bind(this)}>contact us</a>.
-          </p>
+        <div id="share-results-container">
+          <div className="body-container">
+            <p>
+              Something went wrong on our end. You might want to try again.
+              If this issue continues please contact us.
+            </p>
+          </div>
 
-          <button onClick={this.dismissDialog.bind(this)} className="adtl">Okay</button>
+          <footer id="close-footer">
+            <div className="spacer"></div>
+            <button className="adtl" onClick={this.launchContact.bind(this)}>Contact Support</button>
+            <button className="cta" onClick={this.dismissDialog.bind(this)}>Okay</button>
+          </footer>
+        </div>
+      )
+      break
+    case 'limit':
+      var view = (
+        <div id="share-results-container">
+          <div className="body-container">
+            <p>Sorry, you've reached your daily shot limit! Please try posting again tomorrow.</p>
+          </div>
+
+          <footer id="close-footer">
+            <div className="spacer"></div>
+            <button className="cta" onClick={this.dismissDialog.bind(this)}>Okay</button>
+          </footer>
         </div>
       )
       break

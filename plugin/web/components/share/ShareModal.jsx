@@ -40,6 +40,10 @@ module.exports = class ShareModal extends React.Component {
         method: 'GET',
         headers: requestHeaders
       }).then((response) => {
+        if (response.status !== 200) {
+          return this.showError(response)
+        }
+
         response.json().then((user) => {
           this.setState({ user: user })
           _.sendMessage('saveUserDetails', { user: user })
@@ -51,7 +55,7 @@ module.exports = class ShareModal extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.status === 'loading') {
+    if (prevState.status === 'loading' && this.state.status !== 'error') {
       this.setUpContents()
     }
   }

@@ -56,7 +56,8 @@ module.exports = class AccountSelector extends React.Component {
           <img src={this.state.selected.avatar} alt={this.state.selected.name} />
           <div className="name">
             <span>Posting as</span>
-            {this.state.selected.name} &#9662;
+            {this.state.selected.name}
+            {this.state.canChange ? ' ▾' : ''}
           </div>
         </a>
 

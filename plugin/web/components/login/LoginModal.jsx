@@ -10,6 +10,7 @@ module.exports = class LoginModal extends React.Component {
 
   componentDidMount() {
     _.sendMessage('setBrowserSize', { height: this.refs.container.clientHeight })
+    _.trackPage({ path: 'login' })
   }
 
   render() {

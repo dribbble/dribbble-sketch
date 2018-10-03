@@ -21,6 +21,7 @@ module.exports = class Actions extends React.Component {
   }
 
   dismissDialog() {
+    _.trackEvent('auth-cancelled')
     _.sendMessage('closeBrowser')
   }
 
@@ -33,6 +34,8 @@ module.exports = class Actions extends React.Component {
   }
 
   launchLogin() {
+    _.trackEvent('auth-started')
+
     const authUrl = `${_.config.siteUrl}/auth/plugin?state=${_.config.platformIdentifier}-${this.state.sessionId}`
     _.sendMessage('openURL', { url: authUrl })
 
@@ -53,13 +56,16 @@ module.exports = class Actions extends React.Component {
       headers: checkHeaders,
     }).then((response) => {
       response.json().then((data) => {
+        _.trackEvent('auth-success')
         _.sendMessage('saveAuthToken', { token: data.token })
         this.setState({ status: 'success' })
         this.refs.okayBtn.focus()
       }).catch((error) => {
+        _.trackEvent('auth-failure', error)
         this.setState({ status: 'error' })
       })
     }).catch((error) => {
+      _.trackEvent('auth-failure', error)
       this.setState({ status: 'error' })
     })
   }

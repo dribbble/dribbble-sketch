@@ -7,6 +7,8 @@ module.exports = {
   apiUrl: `https://api-${DOMAIN_NAME}/v2`,
   helpUrl: `https://help.dribbble.com/`,
 
+  segmentWriteKey: SEGMENT_WRITE_KEY,
+
   dimensionReqs: {
     min: {
       width: 400,

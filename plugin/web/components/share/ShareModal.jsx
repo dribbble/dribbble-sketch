@@ -30,9 +30,13 @@ module.exports = class ShareModal extends React.Component {
   }
 
   componentDidMount() {
+    _.trackPage({ path: 'share' })
+
     this.setDialogHeight()
 
     if (!this.props.user) {
+      _.trackEvent('user-request-start')
+
       const requestHeaders = new Headers()
       requestHeaders.append('Authorization', `Bearer ${this.props.auth}`)
 
@@ -41,9 +45,11 @@ module.exports = class ShareModal extends React.Component {
         headers: requestHeaders
       }).then((response) => {
         if (response.status !== 200) {
+          _.trackEvent('user-request-failure', response)
           return this.showError(response)
         }
 
+        _.trackEvent('user-request-success')
         response.json().then((user) => {
           this.setState({ user: user })
           _.sendMessage('saveUserDetails', { user: user })
@@ -74,6 +80,7 @@ module.exports = class ShareModal extends React.Component {
   }
 
   submitShot() {
+    _.trackEvent('submit-shot-start')
     this.setState({ submitting: true })
 
     const formData = new FormData(this.refs.shotForm.refs.shotForm)
@@ -91,11 +98,16 @@ module.exports = class ShareModal extends React.Component {
     }).then((response) => {
       if (response.status === 202) {
         const splitUrl = response.headers.get('location').split('/')
+        const shotUrl = `${_.config.siteUrl}/shots/${splitUrl[splitUrl.length - 1]}`
 
         this.setState({
           headerType: 'success',
           status: 'success',
-          shotUrl: `${_.config.siteUrl}/shots/${splitUrl[splitUrl.length - 1]}`
+          shotUrl: shotUrl
+        })
+
+        _.trackEvent('submit-shot-success', {
+          shotUrl: shotUrl
         })
 
         this.setDialogHeight()
@@ -103,6 +115,8 @@ module.exports = class ShareModal extends React.Component {
         try {
           response.json().then((data) => {
             if (data.errors && data.errors[0].message.includes('daily limit')) {
+              _.trackEvent('max-daily-limit')
+
               this.setState({
                 headerType: 'error',
                 status: 'limit'
@@ -110,10 +124,12 @@ module.exports = class ShareModal extends React.Component {
 
               this.setDialogHeight()
             } else {
+              _.trackEvent('submit-shot-error', data)
               this.showError(data)
             }
           })
         } catch(error) {
+          _.trackEvent('submit-shot-error', error)
           this.showError(error)
         }
       }

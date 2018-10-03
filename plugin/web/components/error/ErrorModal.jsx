@@ -31,6 +31,11 @@ module.exports = class ErrorModal extends React.Component {
 
   componentDidMount() {
     _.sendMessage('setBrowserSize', { height: this.refs.container.clientHeight })
+
+    _.trackPage({
+      path: 'error',
+      type: this.props.type
+    })
   }
 
   render() {

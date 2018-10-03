@@ -1,6 +1,10 @@
 const _global = require('../../library/utils')
+const analytics = require('./analytics')
 const serialize = require('../vendor/serialize')
 const pluginCall = require('sketch-module-web-view/client')
+
+// Load Segment
+analytics.load()
 
 /**
  * Send message to Sketch
@@ -128,15 +132,18 @@ function b64toBlob(b64Data, contentType, sliceSize) {
   return new Blob(byteArrays, { type: contentType })
 }
 
-module.exports = Object.assign(_global, {
-  serialize,
-  sendMessage,
-  pluginActions,
-  receiveMessage,
-  selectionTooSmall,
-  selectionTooLarge,
-  selectionBadRatio,
-  retriableFetch,
-  serializeObject,
-  b64toBlob,
-})
+module.exports = Object.assign(
+  _global,
+  analytics, {
+    serialize,
+    sendMessage,
+    pluginActions,
+    receiveMessage,
+    selectionTooSmall,
+    selectionTooLarge,
+    selectionBadRatio,
+    retriableFetch,
+    serializeObject,
+    b64toBlob,
+  }
+)

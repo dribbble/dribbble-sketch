@@ -39,6 +39,10 @@ module.exports = config => {
       STAGING_AUTH: JSON.stringify(!prodMode
         ? process.env.STAGING_AUTH
         : null
+      ),
+      SEGMENT_WRITE_KEY: JSON.stringify(!prodMode
+        ? process.env.SEGMENT_WRITE_KEY
+        : 'XUEHVaNvscWlxX96OkUVoTqj4kc7F2yr'
       )
     })
   )

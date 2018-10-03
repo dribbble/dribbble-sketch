@@ -13,7 +13,7 @@ module.exports = class Actions extends React.Component {
 
   messages(status) {
     return ({
-      login: 'To share your work from Sketch, please log in.',
+      login: 'To share your work from Sketch, please log in to Dribbble.',
       loading: 'Please visit the page opened in your browser.',
       error: 'Something went wrong. Want to try again?',
       success: 'You’re all set! Select a layer to start sharing.'

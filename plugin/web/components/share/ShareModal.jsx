@@ -220,6 +220,7 @@ module.exports = class ShareModal extends React.Component {
             selection={this.props.selection}
             selectedAccount={this.state.selectedAccount}
             setTitleState={this.setTitleState.bind(this)}
+            submitShot={this.submitShot.bind(this)}
             preview={(
             <Preview
               imageData={this.state.imageData}

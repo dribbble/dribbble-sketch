@@ -38,9 +38,9 @@ module.exports = class Dropdown extends React.Component {
         <nav id="dropdown-navigation">
           <ul>
             <li><a href="#" onClick={this.logout.bind(this)}>Log out</a></li>
-            <li><a href="#" onClick={this.launchAccount.bind(this)}>Account settings</a></li>
-            <li className="divider"><a href="#" onClick={this.launchHelp.bind(this)}>Need help?</a></li>
-            <li><a href="#" onClick={this.launchSite.bind(this)}>Visit Dribbble.com</a></li>
+            <li><a href="#" onClick={this.launchAccount.bind(this)}>Account settings…</a></li>
+            <li className="divider"><a href="#" onClick={this.launchHelp.bind(this)}>Support…</a></li>
+            <li><a href="#" onClick={this.launchSite.bind(this)}>Visit Dribbble…</a></li>
           </ul>
         </nav>
       </div>

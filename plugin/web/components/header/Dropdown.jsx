@@ -28,6 +28,20 @@ module.exports = class Dropdown extends React.Component {
     _.sendMessage('openURL', { url: _.config.siteUrl })
   }
 
+  componentWillMount() {
+    document.addEventListener('click', this.handleClick.bind(this), false)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleClick.bind(this), false)
+  }
+
+  handleClick(e) {
+    if (!this.refs.container.contains(e.target)) {
+      this.refs.container.classList.remove('active')
+    }
+  }
+
   render() {
     return (
       <div id="header-dropdown-container" ref="container">

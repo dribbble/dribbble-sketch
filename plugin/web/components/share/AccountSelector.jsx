@@ -49,9 +49,25 @@ module.exports = class AccountSelector extends React.Component {
     this.props.selectedAccountChanged(selectedAccount)
   }
 
+  componentWillMount() {
+    document.addEventListener('click', this.handleClick.bind(this), false)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleClick.bind(this), false)
+  }
+
+  handleClick(e) {
+    if (!this.refs.container.contains(e.target)) {
+      this.setState({
+        selectorActive: false
+      })
+    }
+  }
+
   render() {
     return (
-      <div id="account-selector-container">
+      <div id="account-selector-container" ref="container">
         <a href="#" onClick={this.toggleSelector.bind(this)} className={`current-account-toggle ${this.state.canChange ? 'toggleable' : ''} ${this.state.selectorActive ? 'active' : ''}`}>
           <img src={this.state.selected.avatar} alt={this.state.selected.name} />
           <div className="name">

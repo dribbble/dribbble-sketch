@@ -29,26 +29,30 @@ const receiveMessage = function(stringifiedJSON) {
  */
 const selectionTooSmall = function(selection) {
   return (
-    selection.frame.width < _global.config.dimensionReqs.width &&
-    selection.frame.height < _global.config.dimensionReqs.height
+    selection.frame.width < _global.config.dimensionReqs.min.width ||
+    selection.frame.height < _global.config.dimensionReqs.min.height
   )
 }
 
 /**
  * Check against our internal dimension requirements
- * to if the selection meets one of our dimension requirements
+ * to see if the selection dimensions are too large
  */
-const notExactSize = function(selection) {
-  const exactSmall = selection.frame.width === _global.config.dimensionReqs.small.width &&
-                     selection.frame.height === _global.config.dimensionReqs.small.height
-  const exactLarge = selection.frame.width === _global.config.dimensionReqs.large.width &&
-                     selection.frame.height === _global.config.dimensionReqs.large.height
+const selectionTooLarge = function(selection) {
+  return (
+    selection.frame.width > _global.config.dimensionReqs.max.width ||
+    selection.frame.height > _global.config.dimensionReqs.max.height
+  )
+}
 
-  if (exactSmall || exactLarge) {
-    return false
-  } else {
-    return true
-  }
+/**
+ * Check against our internal dimension requirements
+ * to see if the selection dimensions are not the accepted ratio
+ */
+const selectionBadRatio = function(selection) {
+  const allowedRatio = _global.config.dimensionReqs.min.width / _global.config.dimensionReqs.min.height
+  const actualRatio = selection.frame.width / selection.frame.height
+  return allowedRatio !== actualRatio
 }
 
 /**
@@ -130,7 +134,8 @@ module.exports = Object.assign(_global, {
   pluginActions,
   receiveMessage,
   selectionTooSmall,
-  notExactSize,
+  selectionTooLarge,
+  selectionBadRatio,
   retriableFetch,
   serializeObject,
   b64toBlob,

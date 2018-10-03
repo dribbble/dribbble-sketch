@@ -23,11 +23,17 @@ _.pluginActions.receiveContext = function(context) {
     Component = ErrorModal
     props = { type: 'noSelection' }
   } else if (context.selectionSize > 1) {
-     Component = ErrorModal
-     props = { type: 'multipleSelection' }
-  } else if (_.notExactSize(context.selection)) {
     Component = ErrorModal
-    props = { type: 'badSize', selection: context.selection }
+    props = { type: 'multipleSelection' }
+  } else if (_.selectionBadRatio(context.selection)) {
+    Component = ErrorModal
+    props = { type: 'badRatio', selection: context.selection }
+  } else if (_.selectionTooSmall(context.selection)) {
+    Component = ErrorModal
+    props = { type: 'tooSmall', selection: context.selection }
+  } else if (_.selectionTooLarge(context.selection)) {
+    Component = ErrorModal
+    props = { type: 'tooLarge', selection: context.selection }
   } else {
     Component = ShareModal
     props = { selection: context.selection, user: userDetails, auth: authToken }

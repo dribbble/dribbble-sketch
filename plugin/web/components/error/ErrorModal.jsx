@@ -13,8 +13,14 @@ const errorMessages = {
   multipleSelection() {
     return 'You’ve selected more than one Layer. Please select one and try again.'
   },
-  badSize() {
-    return `Your selection is ${this.props.selection.frame.width}px × ${this.props.selection.frame.height}px. Dribbble requires Shots to be ${_.config.dimensionReqs.small.width}px × ${_.config.dimensionReqs.small.height}px or ${_.config.dimensionReqs.large.width}px × ${_.config.dimensionReqs.large.height}px.`
+  badRatio() {
+    return `Your selection is ${this.props.selection.frame.width.toFixed()}px × ${this.props.selection.frame.height.toFixed()}px, which is not the ratio accepted by Dribbble. The allowed ratio is 4:3 (e.g. 400 × 300, 720 × 540, or 1200 × 900).`
+  },
+  tooSmall() {
+    return `Your selection is ${this.props.selection.frame.width.toFixed()}px × ${this.props.selection.frame.height.toFixed()}px, which is too small. Dribbble requires Shots to be at least ${_.config.dimensionReqs.min.width}px × ${_.config.dimensionReqs.min.height}px.`
+  },
+  tooLarge() {
+    return `Your selection is ${this.props.selection.frame.width.toFixed()}px × ${this.props.selection.frame.height.toFixed()}px, which is too large. Dribbble requires Shots to be no larger than ${_.config.dimensionReqs.max.width}px × ${_.config.dimensionReqs.max.height}px.`
   }
 }
 

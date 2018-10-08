@@ -3,8 +3,8 @@ module.exports = {
   browserIdentifier: 'dribbble-sketch',
 
   apiKey: API_CLIENT_KEY,
-  siteUrl: `https://${DOMAIN_NAME}`,
-  apiUrl: `https://api-${DOMAIN_NAME}/v2`,
+  siteUrl: SITE_URL,
+  apiUrl: API_URL,
   helpUrl: `https://help.dribbble.com/`,
 
   segmentWriteKey: SEGMENT_WRITE_KEY,

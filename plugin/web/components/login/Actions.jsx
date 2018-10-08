@@ -70,6 +70,11 @@ module.exports = class Actions extends React.Component {
     })
   }
 
+  launchSignup() {
+    const signupUrl = `${_.config.siteUrl}/signup/new`
+    _.sendMessage('openURL', { url: signupUrl })
+  }
+
   render() {
     return (
       <div id="login-footer">
@@ -88,7 +93,10 @@ module.exports = class Actions extends React.Component {
                   <span className="default-cursor">Waiting...</span>
                 </div>
               ) : (
-                <button onClick={this.launchLogin.bind(this)} className="cta" ref="loginBtn">Log in to Dribbble</button>
+                <div>
+                  <button onClick={this.launchSignup.bind(this)} className="adtl">Sign Up</button>
+                  <button onClick={this.launchLogin.bind(this)} className="cta" ref="loginBtn">Log in to Dribbble</button>
+                </div>
               ) }
             </div>
           ) }

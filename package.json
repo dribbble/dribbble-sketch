@@ -1,13 +1,13 @@
 {
   "name": "dribbble-sketch",
   "version": "0.2.0",
-  "description": "",
+  "description": "Share your creative process directly to the Dribbble community from within Sketch.",
   "author": "Dribbble",
   "engines": {
     "sketch": ">=3.0"
   },
   "skpm": {
-    "name": "dribbble",
+    "name": "Dribbble",
     "manifest": "plugin/sketch/manifest.json",
     "main": "dribbble.sketchplugin",
     "resources": [

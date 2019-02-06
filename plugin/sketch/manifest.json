@@ -1,0 +1,20 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "identifier": "com.dribbble.sketch-plugin",
+  "icon": "web/images/dribbble-ball.png",
+  "commands": [
+    {
+      "name": "Share to Dribbble",
+      "identifier": "share-command",
+      "script": "./main.js",
+      "shortcut" : "cmd shift d"
+    }
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": [
+      "share-command"
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Share to Dribbble</title>
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      #app {
+        height: 100%;
+      }
+
+      #loading-container {
+        transform: translateY(-50%);
+        position: relative;
+        top: 50%;
+      }
+
+      #loading-inner {
+        display: flex;
+        align-items: center;
+        width: 140px;
+        margin: 0 auto;
+      }
+
+      #loading-inner.bad-news {
+        text-align: center;
+        width: 270px;
+      }
+
+      #loading-inner img {
+        width: 32px;
+        height: 32px;
+      }
+
+      #loading-inner p {
+        margin: 0;
+        font-size: 14px;
+        color: #444;
+      }
+    </style>
+
+    <script>
+      setTimeout(function() {
+        if (!window.pluginLoaded) {
+          const inner = document.querySelector('#loading-inner')
+          inner.classList.add('bad-news')
+          inner.innerHTML = `
+            <p>
+              <b>Something's not right.</b>
+              Please try again or re-install the plugin.
+              Sorry about that.
+            </p>`
+        }
+      }, 5000)
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="loading-container">
+        <div id="loading-inner">
+          <img src="../web/images/processing.gif" />
+          <p>One moment...</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="../main.js" ></script>
+  </body>
+</html>

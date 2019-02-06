@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "Share your creative process directly to the Dribbble community from within Sketch.",
   "author": "Dribbble Holdings Ltd.",
+  "license": "MIT",
   "engines": {
     "sketch": ">=3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dribbble/dribbble-sketch.git"
   },
   "skpm": {
     "name": "Dribbble",

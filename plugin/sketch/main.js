@@ -43,7 +43,7 @@ module.exports = function(context) {
       userDetails: _.Settings.settingForKey('user-details'),
       selectionSize: selectionSize,
       selection: selectedComponent != null
-        ? selectedComponent.toJSON()
+        ? { name: selectedComponent.name, frame: selectedComponent.frame.toJSON() }
         : undefined
     })
   }

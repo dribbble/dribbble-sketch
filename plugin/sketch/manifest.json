@@ -2,7 +2,7 @@
   "compatibleVersion": 3,
   "bundleVersion": 1,
   "identifier": "com.dribbble.sketch-plugin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Allows you to share to Dribbble right within Sketch.",
   "appcast": "https://raw.githubusercontent.com/dribbble/dribbble-sketch/master/.appcast.xml",
   "icon": "web/images/dribbble-ball.png",
